@@ -1,0 +1,112 @@
+<?php
+
+namespace BienBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * optionBien
+ *
+ * @ORM\Table(name="optionBien")
+ * @ORM\Entity(repositoryClass="BienBundle\Repository\optionBienRepository")
+ */
+class optionBien
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    /**
+     * @ORM\ManyToMany (targetEntity="BienBundle\Entity\bien", mappedBy="optionBiens")
+     */
+    private $biens;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomOptionBien", type="string", length=255)
+     */
+    private $nomOptionBien;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nomOptionBien
+     *
+     * @param string $nomOptionBien
+     *
+     * @return optionBien
+     */
+    public function setNomOptionBien($nomOptionBien)
+    {
+        $this->nomOptionBien = $nomOptionBien;
+
+        return $this;
+    }
+
+    /**
+     * Get nomOptionBien
+     *
+     * @return string
+     */
+    public function getNomOptionBien()
+    {
+        return $this->nomOptionBien;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->biens = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add bien
+     *
+     * @param \BienBundle\Entity\bien $bien
+     *
+     * @return optionBien
+     */
+    public function addBien(\BienBundle\Entity\bien $bien)
+    {
+        $this->biens[] = $bien;
+
+        return $this;
+    }
+
+    /**
+     * Remove bien
+     *
+     * @param \BienBundle\Entity\bien $bien
+     */
+    public function removeBien(\BienBundle\Entity\bien $bien)
+    {
+        $this->biens->removeElement($bien);
+    }
+
+    /**
+     * Get biens
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getBiens()
+    {
+        return $this->biens;
+    }
+}

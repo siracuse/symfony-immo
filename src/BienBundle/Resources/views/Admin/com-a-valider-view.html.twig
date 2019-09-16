@@ -1,0 +1,83 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Biens
+{% endblock %}
+{% block title %}
+    <h5> Bien Immobilier > Commentaires </h5>
+{% endblock %}
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-lg-12">
+                    {% for message in app.flashes('suppression') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                    {% for message in app.flashes('modif') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="col-md-6 offset-3"><h2 class="text-center"><i class="fa fa-clock-o"></i> Les
+                                    Commentaires en attente</h2></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="bootstrap-data-table">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Bien</th>
+                                        <th scope="col">Auteur</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Message</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if mesCommentaires == null %}
+                                        <tr>
+                                            <td colspan="5" class="text-center"><i> vide </i></td>
+                                        </tr>
+                                    {% else %}
+                                        {% for com in mesCommentaires %}
+                                            <tr>
+                                                <td> {{ com.bien.titreBien }}</td>
+                                                <td> {{ com.auteurCom }}</td>
+                                                <td>{{ com.dateCom|date('d/m/Y G:i:s') }}</td>
+                                                <td>
+                                                    {% if com.messageCom|length > 20 %}
+                                                        <a href="/agence/web/app_dev.php/admin/com-a-valider/fiche/{{ com.id }}">
+                                                            <b>Voir le message</b> <i class="fa fa-angle-right"></i>
+                                                        </a>
+                                                    {% else %}
+                                                        {{ com.messageCom }}
+                                                    {% endif %}
+                                                <td>
+                                                    <a href="/agence/web/app_dev.php/admin/com-a-valider/valider/{{ com.id }}"
+                                                       style="margin-right: 10%;">
+                                                        <i class="menu-icon fa fa-check"></i>
+                                                    </a>
+                                                    <a data-href="/agence/web/app_dev.php/admin/com-a-valider/delete/{{ com.id }}"
+                                                       data-toggle="modal" data-target="#confirm-delete">
+                                                        <i class="menu-icon fa fa-close"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

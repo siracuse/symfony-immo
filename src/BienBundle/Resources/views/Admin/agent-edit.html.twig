@@ -1,0 +1,46 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Agents
+{% endblock %}
+{% block title %}
+    <h5> L'Entreprise > <a href="{{ path('admin-agent-view') }}"> Les Agents </a> > Modifier </h5>
+{% endblock %}
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-md-12">
+                    <div class="card">
+                        <div class="card-header"><strong>Modification </strong> de L'Agent :
+                            <strong>{{ agent.nomAgent }}</strong>
+                        </div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                {{ form_start(form) }}
+                                <div class="col-md-6 col-sm-12 Hmarge">{{ form_row(form.nomAgent) }}</div>
+                                <div class="col-md-6 col-sm-12 SHmarge">{{ form_row(form.prenomAgent) }}</div>
+                                <div class="col-md-7 col-sm-12 SHmarge">{{ form_row(form.emailAgent) }}</div>
+                                <div class="col-md-5 col-sm-12">{{ form_row(form.telAgent) }}</div>
+                                <div class="col-md-12 col-sm-12 SHmarge">
+                                    {{ form_label(form.photoAgent) }}<br>
+                                    {{ form_widget(form.photoAgent, {'required' : false, 'attr':{'accept' : 'image/*'}}) }}<br>
+                                    <p class="SHmargeTop"><strong>Taille maximale :</strong> 300 Ko<br>
+                                        <strong>Formats supportés :</strong> jpg et png</p>
+                                    {{ form_errors(form.photoAgent) }}<br>
+                                </div>
+                                <div class="col-md-12 col-sm-12 SHmarge"><b>Adresse de l'agent :</b></div>
+                                <div class="col-md-6 col-sm-12 SHmarge">{{ form_row(form.adresse.nomVille) }}</div>
+                                <div class="col-md-6 col-sm-12 SHmarge">{{ form_row(form.adresse.rueAdresse) }}</div>
+                                <div class="col-md-4 col-sm-12 SHmarge">{{ form_row(form.adresse.cpVille) }}</div>
+                                <div class="col-md-4 col-sm-12 SHmarge">{{ form_row(form.adresse.bpAdresse) }}</div>
+                                <div class="col-md-4 col-sm-12 SHmarge">{{ form_row(form.adresse.zoneGeo) }}</div>
+                                <div class="col-md-12"><b>{{ form_rest(form.adresse) }}</b></div>
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

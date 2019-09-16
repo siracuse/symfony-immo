@@ -1,0 +1,80 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Zone Géographique
+{% endblock %}
+{% block title %}
+    <h5> Autres > Zone Géographique </h5>
+{% endblock %}
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-lg-12">
+                    {% for message in app.flashes('ajout') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                    {% for message in app.flashes('modif') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                    {% for message in app.flashes('suppression') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6"><h2 class="text-center">Zone Géographique</h2></div>
+                            <div class="col-md-3 text-right">
+                                <a href="{{ path('admin-zone-geo-new') }}">
+                                    <i class="menu-icon fa fa-plus SHbtAdd" style="margin-top: 10px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Nom de la zone</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if zoneGeo == null %}
+                                        <tr>
+                                            <td colspan="2" class="text-center"><i> vide </i></td>
+                                        </tr>
+                                    {% else %}
+                                        {% for zone in zoneGeo %}
+                                            <tr>
+                                                <td>{{ zone.nomZone }}</td>
+                                                <td><a href="/agence/web/app_dev.php/admin/zone-geo/edit/{{ zone.id }}"
+                                                       style="margin-right: 10%;">
+                                                        <i class="menu-icon fa fa-edit"></i>
+                                                    </a>
+                                                    <a data-href="/agence/web/app_dev.php/admin/zone-geo/delete/{{ zone.id }}"
+                                                       data-toggle="modal" data-target="#confirm-delete">
+                                                        <i class="menu-icon fa fa-trash"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

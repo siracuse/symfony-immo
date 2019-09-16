@@ -1,0 +1,401 @@
+{% extends "//layout.html.twig" %}
+{% block couleur %}
+    <link rel="stylesheet" type="text/css" id="style_sheet"
+          href="{{ asset('vue/css/skins/'~  couleur.nomCouleur ~'.css') }}">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{{ asset('vue/img/favicon/'~ couleur.nomCouleur ~'-logo.ico') }}"
+          type="image/x-icon">
+{% endblock %}
+{% block logoCouleur %}
+    <img src="{{ asset('vue/img/logos/'~ couleur.nomCouleur ~'-logo.png') }}" alt="logo">
+{% endblock %}
+{% block body %}
+    <!-- Sub banner start -->
+    <div class="sub-banner">
+        <div class="overlay">
+            <div class="container">
+                <div class="breadcrumb-area">
+                    <h1>Détails du bien</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="/agence/web/app_dev.php/">Accueil</a></li>
+                        <li class="active">Détail du bien</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sub Banner end -->
+
+    <!-- Properties details page start -->
+    <div class="content-area  properties-details-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    {% for message in app.flashes('postCommentaire') %}
+                        <div class="alert alert-success alert-dismissible" style="z-index: 33;">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>{{ message }}</strong>
+                        </div>
+                    {% endfor %}
+                    <!-- Header -->
+
+                    <div class="heading-properties clearfix sidebar-widget">
+                        <div class="pull-left">
+                            <h3>{{ bien.titreBien }}</h3>
+                            <p><i class="fa fa-calendar-o icon"> </i> Ajouté
+                                le {{ bien.dateDepotBien  | localizeddate('medium', 'none') }}</p>
+
+                        </div>
+                        <div class="pull-right">
+                            <h3><span>
+                                    {{ bien.prixBien }} €
+                                    {% if bien.typeVenteBien == 'À Louer' %}
+                                        / mois
+                                    {% endif %}
+                                </span></h3>
+                        </div>
+                    </div>
+
+                    <!-- Properties details section start -->
+                    <div class="Properties-details-section sidebar-widget">
+                        <div class="SHimgBienFiche SHmarge2 img-responsive"
+                             style="background-image:url('{{ asset('uploads/biens/'~ bien.photoBien ~'') }}') ">
+                        </div>
+
+
+                        <!-- Property description start -->
+                        <div class="panel-box properties-panel-box Property-description">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab1default" data-toggle="tab" aria-expanded="true">Description</a>
+                                </li>
+                                <li class=""><a href="#tab2default" data-toggle="tab"
+                                                aria-expanded="false">Fiche technique</a></li>
+                                <li class=""><a href="#tab3default" data-toggle="tab"
+                                                aria-expanded="false">Options</a></li>
+                                <li class=""><a href="#tab4default" data-toggle="tab"
+                                                aria-expanded="false">Contact</a></li>
+
+                            </ul>
+                            <div class="panel with-nav-tabs panel-default">
+                                <div class="panel-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade active in" id="tab1default">
+                                            <div class="main-title-2">
+                                                <h1><span>Description</span></h1>
+                                            </div>
+                                            <p>{{ bien.descripBien|raw }}</p>
+                                            <br>
+                                        </div>
+                                        <div class="tab-pane fade features" id="tab2default">
+                                            <!-- Properties condition start -->
+                                            <div class="properties-condition">
+                                                <div class="main-title-2">
+                                                    <h1><span>Fiche Technique</span></h1>
+                                                </div>
+                                                <div class="row">
+
+                                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                                        <ul class="condition">
+                                                            <li><i class="fa fa-check-square"></i>{{ bien.surfaceBien }}
+                                                                m²
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    {% if bien.nbPieceBien != 0 %}
+                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                            <ul class="condition">
+                                                                <li><i class="fa fa-check-square"></i>
+                                                                    {{ bien.nbPieceBien }} pièce(s)
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    {% endif %}
+                                                    {% if bien.nbChambreBien != 0 %}
+                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                            <ul class="condition">
+                                                                <li>
+                                                                    <i class="fa fa-check-square"></i>{{ bien.nbChambreBien }}
+                                                                    chambre(s)
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    {% endif %}
+                                                    {% if bien.nbSalleDeBainBien != 0 %}
+                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                            <ul class="condition">
+                                                                <li>
+                                                                    <i class="fa fa-check-square"></i>{{ bien.nbSalleDeBainBien }}
+                                                                    salle d'eau
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <!-- Properties condition end -->
+                                        </div>
+                                        <div class="tab-pane fade technical" id="tab3default">
+                                            <!-- Properties amenities start -->
+                                            <div class="properties-amenities">
+                                                <div class="main-title-2">
+                                                    <h1><span>Options</span></h1>
+                                                </div>
+                                                <div class="row">
+                                                    {% for option in options %}
+                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                            <ul class="condition">
+                                                                <li>
+                                                                    <i class="fa fa-check-square"></i>{{ option.nomDetails }}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                            <!-- Properties amenities end -->
+                                        </div>
+                                        <div class="tab-pane fade technical" id="tab4default">
+                                            <div class="main-title-2">
+                                                <h1><span>Contact</span></h1>
+                                            </div>
+                                            {{ form_start(formContact) }}
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                    <div class="form-group fullname">
+                                                        {{ form_widget(formContact.nom, {'attr' : {'class' : 'input-text', 'placeholder' : 'Nom *'}} ) }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                    <div class="form-group enter-email">
+                                                        {{ form_widget(formContact.email, {'attr' : {'class' : 'input-text', 'placeholder' : 'E-mail *'}} ) }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                    <div class="form-group subject">
+                                                        {{ form_widget(formContact.sujet, {'attr' : {'class' : 'input-text', 'placeholder' : 'Sujet *'}} ) }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                    <div class="form-group number">
+                                                        {{ form_widget(formContact.telephone, {'attr' : {'class' : 'input-text', 'placeholder' : 'Téléphone *'}} ) }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                                    <div class="form-group message">
+                                                        {{ form_widget(formContact.message, {'attr' : {'class' : 'input-text', 'placeholder' : 'Votre Message *'}} ) }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                                                    <div class="form-group send-btn">
+                                                        {{ form_widget(formContact.Valider, {'attr' : {'class' : 'button-md button-theme'}}) }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 hidden"><b>{{ form_rest(formContact) }}</b></div>
+                                            {{ form_end(formContact) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property description end -->
+                    </div>
+                    <!-- Properties details section end -->
+
+                    <!-- Properties details section start -->
+                    <div class="Properties-details-section sidebar-widget">
+                        <!-- Properties comments start -->
+                        <div class="properties-comments mrg-btm-40">
+                            <!-- Comments section start -->
+                            <div class="comments-section">
+                                <!-- Main Title 2 -->
+                                {% if bienCom != null %}
+                                    <div class="main-title-2">
+                                        <h1><span>Commentaires </span></h1>
+                                    </div>
+                                {% endif %}
+                                {% if bienCom != null %}
+                                    {% for com in bienCom.commentaires %}
+                                        <ul class="comments">
+                                            <li>
+                                                <div class="comment">
+                                                    <div class="comment-author">
+                                                        <a href="#">
+                                                            <img src="http://placehold.it/60x60" alt="avatar-5">
+                                                        </a>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        <div class="comment-meta">
+                                                            <div class="comment-meta-author">
+                                                                {{ com.auteurCom }}
+                                                            </div>
+                                                            {#<div class="comment-meta-reply">#}
+                                                            {#<a href="#">Répondre</a>#}
+                                                            {#</div>#}
+                                                            <div class="comment-meta-date">
+                                                                <span class="hidden-xs">{{ com.dateCom|date('d/m/Y G:i') }}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                        <div class="comment-body">
+                                                            {#<div class="comment-rating">#}
+                                                            {#<i class="fa fa-star"></i>#}
+                                                            {#<i class="fa fa-star"></i>#}
+                                                            {#<i class="fa fa-star"></i>#}
+                                                            {#<i class="fa fa-star"></i>#}
+                                                            {#<i class="fa fa-star-o"></i>#}
+                                                            {#</div>#}
+                                                            <p>{{ com.messageCom }}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <!-- Comments section end -->
+                        </div>
+                        <!-- Properties comments end -->
+
+                        <!-- Contact form start -->
+                        <div class="contact-form">
+                            <!-- Main Title 2 -->
+                            <div class="main-title-2">
+                                <h1><span>Laisser</span> un commentaire</h1>
+                            </div>
+                            {{ form_start(formCom) }}
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 SHmarge2">
+                                    {{ form_widget(formCom.messageCom) }}
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    {{ form_widget(formCom.Valider) }}
+                                </div>
+                            </div>
+                            {{ form_end(formCom) }}
+                        </div>
+                        <!-- Contact form end -->
+                    </div>
+                    <!-- Properties details section end -->
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <!-- Sidebar start -->
+                    <div class="sidebar right">
+                        <!-- Advanced search start -->
+                        <div class="sidebar-widget hidden-xs hidden-sm">
+                            <div class="main-title-2">
+                                <h1><span>Recherche</span>Avancée</h1>
+                            </div>
+
+                            {{ form_start(form) }}
+                            <div class="SHmarge2">
+                                {{ form_widget(form.typeVenteBien, {'attr' : {
+                                    'class' : 'search-fieldss selectpicker',
+                                    'data-live-search' : 'true',
+                                    'data-live-search-placeholder' : 'Recherche'
+                                }}) }}
+                            </div>
+                            {{ form_errors(form.typeVenteBien) }}
+
+                            <div class="SHmarge2">
+                                {{ form_widget(form.typeBien, {'attr' : {
+                                    'class' : 'search-fieldss selectpicker',
+                                    'data-live-search' : 'true',
+                                    'data-live-search-placeholder' : 'Recherche'
+                                }}) }}
+                                {{ form_errors(form.typeBien) }}
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 SHmarge2">
+                                    {{ form_widget(form.zoneGeo, {'attr' : {
+                                        'class' : 'search-fieldss selectpicker',
+                                        'data-live-search' : 'true',
+                                        'data-live-search-placeholder' : 'Recherche'
+                                    }}) }}
+                                    {{ form_errors(form.zoneGeo) }}
+                                </div>
+                                <div class="col-md-6 SHmarge2">
+                                    {{ form_widget(form.nbPiece, {'attr' : {
+                                        'class' : 'search-fieldss selectpicker',
+                                        'data-live-search' : 'true',
+                                        'data-live-search-placeholder' : 'Recherche'
+                                    }}) }}
+                                    {{ form_errors(form.nbPiece) }}
+                                </div>
+                                <div class="col-md-6 SHmarge2">
+                                    {{ form_widget(form.nbChambre, {'attr' : {
+                                        'class' : 'search-fieldss selectpicker',
+                                        'data-live-search' : 'true',
+                                        'data-live-search-placeholder' : 'Recherche'
+                                    }}) }}
+                                    {{ form_errors(form.nbChambre) }}
+                                </div>
+                                <div class="col-md-6 SHmarge2">
+                                    {{ form_widget(form.nbSalleDeBain, {'attr' : {
+                                        'class' : 'search-fieldss selectpicker',
+                                        'data-live-search' : 'true',
+                                        'data-live-search-placeholder' : 'Recherche'
+                                    }}) }}
+                                    {{ form_errors(form.nbSalleDeBain) }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 SHmarge2">
+                                    {{ form_widget(form.surfaceBienMax, {'attr' : {
+                                        'class' : 'search-fieldss selectpicker',
+                                        'data-live-search' : 'true',
+                                        'data-live-search-placeholder' : 'Recherche'
+                                    }}) }}
+                                    {{ form_errors(form.surfaceBienMax) }}
+                                </div>
+                                <div class="col-md-12 SHmarge4">
+                                    {{ form_widget(form.prixMax, {'id': 'myRange', 'value': monPrixMax['prixMax'],
+                                        'attr': {'min' : monPrixMin['prixMin'], 'max' : monPrixMax['prixMax']}}) }}
+                                    Prix max : <span id="demo"> </span> €
+                                </div>
+                            </div>
+                            {{ form_widget(form.Rechercher) }}
+
+                            {{ form_end(form) }}
+                        </div>
+                        <!-- Advanced search end -->
+
+                        <!-- Popular posts start -->
+                        <div class="sidebar-widget popular-posts">
+                            <div class="main-title-2">
+                                <h1><span>Récent</span> Bien ajouté</h1>
+                            </div>
+                            {% for bien in bienRecent %}
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="/agence/web/app_dev.php/bien/fiche/{{ bien.id }}">
+                                        <img class="media-object"
+                                             src="{{ asset('uploads/biens/'~ bien.photoBien ~'') }}" height="63"
+                                             width="90">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h3 class="media-heading">
+                                            <a href="/agence/web/app_dev.php/bien/fiche/{{ bien.id }}">{{ bien.titreBien }}</a>
+                                        </h3>
+                                        <p>{{ bien.dateDepotBien | localizeddate('medium', 'none') }}</p>
+                                        <div class="comments-icon">
+                                            <i class="fa fa-bookmark"></i>{{ bien.typeVenteBien }}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <!-- Popular posts end -->
+
+                    </div>
+                    <!-- Sidebar end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Properties details page end -->
+
+
+{% endblock %}

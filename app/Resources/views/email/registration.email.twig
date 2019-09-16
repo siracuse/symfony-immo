@@ -1,0 +1,21 @@
+{% block subject %} The Nest - Confirmation d'inscription {% endblock %}
+
+{% block body_html %}
+
+
+    {% autoescape false %}
+
+        <h3 style="border-bottom: 1px black solid">
+            Confirmation d'inscription
+        </h3>
+
+        Bonjour {{ user.username }} ! <br><br>
+
+        Vous avez récemment créé un compte sur The Nest. <br>
+        Pour terminer votre inscription, veuillez cliquer <a href="{{ confirmationUrl }}"> ici </a> <br><br>
+
+        Merci à vous,<br>
+        Cordialement
+
+    {% endautoescape %}
+{% endblock %}

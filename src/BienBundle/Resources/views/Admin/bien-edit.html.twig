@@ -1,0 +1,103 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Biens
+{% endblock %}
+{% block title %}
+    <h5> Bien Immobilier > <a href="{{ path('admin-bien-view') }}"> Les Biens </a> > Modifier </h5>
+{% endblock %}
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-md-12">
+                    <div class="card">
+                        <div class="card-header"><b>Modification</b> du Bien : <b>{{ bien.titreBien }}</b>
+                        </div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                {{ form_start(form) }}
+                                {#INFO BIEN#}
+                                <div class="col-lg-8 col-md-8 SHmarge"><b>Informations générales
+                                        : </b>{{ form_row(form.titreBien, {'attr': {'autofocus': 'autofocus'}}) }}
+                                </div>
+                                <div class="col-lg-4 col-md-4 SHmarge">{{ form_row(form.statutBien) }}</div>
+                                <div class="col-lg-6 col-md-6 SHmarge">
+                                    {{ form_label(form.typeVenteBien, 'Type de vente :', {'label_attr':{'class' : 'test2'}}) }}
+                                    {{ form_widget(form.typeVenteBien) }}
+                                    {{ form_errors(form.typeVenteBien) }}
+                                </div>
+                                <div class="col-lg-6 col-md-6 SHmarge">
+                                    <div class="form-group">
+                                        {{ form_label(form.typeBien, 'Type de Bien :', {'label_attr':{'class' : 'test2'}}) }}
+                                        {{ form_widget(form.typeBien) }}
+                                        {{ form_errors(form.typeBien) }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 SHmarge">{{ form_row(form.surfaceBien) }}</div>
+                                <div class="col-lg-6 col-md-6 SHmarge">{{ form_row(form.prixBien) }}</div>
+                                <div class="col-lg-4 col-md-6 SHmarge">{{ form_row(form.nbPieceBien) }}</div>
+                                <div class="col-lg-4 col-md-6 SHmarge">{{ form_row(form.nbChambreBien) }}</div>
+                                <div class="col-lg-4 col-md-6 SHmarge">{{ form_row(form.nbSalleDeBainBien) }}</div>
+                                {#PHOTOS#}
+                                <div class="col-lg-12 col-md-12 SHmarge">
+                                    {{ form_label(form.photoBien) }}<br>
+                                    {{ form_widget(form.photoBien, {'required' : false, 'attr':{'accept' : 'image/*'}}) }}<br>
+                                    <p class="SHmargeTop"><strong>Taille maximale :</strong> 500 Ko<br>
+                                        <strong>Formats supportés :</strong> jpg et png</p>
+                                    {{ form_errors(form.photoBien) }}
+                                </div>
+                                <div class="col-lg-12 col-md-12 SHmarge">{{ form_row(form.descripBien, {'attr' : {'rows' : '5'}}) }}</div>
+                                <div class="col-lg-12 col-md-12 SHmarge">
+                                    <b>{{ form_label(form.detailsBiens) }}</b>
+                                </div>
+                                {% for detail in form.detailsBiens %}
+                                <div class="col-lg-4 col-md-4 SHmarge">
+                                    {{ form_widget(detail, {'required' : false}) }}
+                                    {{ form_errors(detail) }}
+                                </div>
+                                {% endfor %}<br><br>
+                                {#ADRESSE BIEN#}
+                                <div class="col-lg-12 col-md-12 SHmarge"><b>{{ form_label(form.adresse) }}</b></div>
+                                <div class="col-lg-6 col-md-12 SHmarge">{{ form_row(form.adresse.nomVille) }}</div>
+                                <div class="col-lg-6 col-md-12 SHmarge">{{ form_row(form.adresse.rueAdresse) }}</div>
+                                <div class="col-lg-4 col-md-6 SHmarge">{{ form_row(form.adresse.cpVille) }}</div>
+                                <div class="col-lg-4 col-md-6 SHmarge">{{ form_row(form.adresse.bpAdresse) }}</div>
+                                <div class="col-lg-4 col-md-12 SHmarge">{{ form_row(form.adresse.zoneGeo) }}</div>
+                                {#INFO PROPRIO#}
+                                <div class="col-lg-12 col-md-12 SHmarge"><b>{{ form_label(form.proprietaire) }}</b>
+                                </div>
+                                <div class="col-lg-6 col-md-12 SHmarge">{{ form_row(form.proprietaire.nomProprietaire) }}</div>
+                                <div class="col-lg-6 col-md-12 SHmarge">{{ form_row(form.proprietaire.prenomProprietaire) }}</div>
+                                <div class="col-lg-5 col-md-12 SHmarge">{{ form_row(form.proprietaire.telProprietaire) }}</div>
+                                <div class="col-lg-7 col-md-12 SHmarge">{{ form_row(form.proprietaire.emailProprietaire) }}</div>
+                                {#ADRESSE PROPRIO#}
+                                <div class="col-lg-12 col-md-12 SHmarge">
+                                    <b>{{ form_label(form.proprietaire.adresse) }}</b>
+                                </div>
+                                <div class="col-lg-6 col-md-12 SHmarge">{{ form_row(form.proprietaire.adresse.nomVille) }}</div>
+                                <div class="col-lg-6 col-md-12 SHmarge">{{ form_row(form.proprietaire.adresse.rueAdresse) }}</div>
+                                <div class="col-lg-4 col-md-6 SHmarge">{{ form_row(form.proprietaire.adresse.cpVille) }}</div>
+                                <div class="col-lg-4 col-md-6 SHmarge">{{ form_row(form.proprietaire.adresse.bpAdresse) }}</div>
+                                <div class="col-lg-4 col-md-12 SHmarge">{{ form_row(form.proprietaire.adresse.zoneGeo) }}</div>
+
+                                {#AGENCES#}
+                                <div class="col-lg-6 col-md-12 SHmarge">
+                                    <b>{{ form_row(form.agences, {'attr' : {'size' : '6'}, 'required' : false}) }}</b>
+                                </div>
+                                {#AGENTS#}
+                                <div class="col-lg-6 col-md-12 SHmarge">
+                                    <b>{{ form_row(form.agents, {'attr' : {'size' : '6'}, 'required' :false}) }}</b>
+                                </div>
+
+                                {#VALIDER#}
+                                <div class="col-lg-12 col-md-12">{{ form_widget(form.Valider) }}</div>
+                                <div class="col-md-12 hidden"><b>{{ form_rest(form) }}</b></div>
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

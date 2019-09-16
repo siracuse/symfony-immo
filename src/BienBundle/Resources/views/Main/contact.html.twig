@@ -1,0 +1,180 @@
+{% extends "//layout.html.twig" %}
+{% block couleur %}
+    <link rel="stylesheet" type="text/css" id="style_sheet"
+          href="{{ asset('vue/css/skins/'~  couleur.nomCouleur ~'.css') }}">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{{ asset('vue/img/favicon/'~ couleur.nomCouleur ~'-logo.ico') }}"
+          type="image/x-icon">
+{% endblock %}
+{% block logoCouleur %}
+    <img src="{{ asset('vue/img/logos/'~ couleur.nomCouleur ~'-logo.png') }}" alt="logo">
+{% endblock %}
+
+{% block bandeau %}
+    <!-- Sub banner start -->
+    <div class="sub-banner">
+        <div class="overlay">
+            <div class="container">
+                <div class="breadcrumb-area">
+                    <h1>Contact</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="/agence/web/app_dev.php">Accueil</a></li>
+                        <li class="active">Contact</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <!-- Contact body start -->
+    <div class="contact-body content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                    {% for message in app.flashes('message') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                    <!-- Contact form start -->
+                    <div class="contact-form">
+                        <div class="main-title-2">
+                            <h1><span>Contact</span></h1>
+                        </div>
+                        {{ form_start(form) }}
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group fullname">
+                                    {{ form_widget(form.nom, {'attr' : {'class' : 'input-text', 'placeholder' : 'Nom *'}} ) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group enter-email">
+                                    {{ form_widget(form.email, {'attr' : {'class' : 'input-text', 'placeholder' : 'E-mail *'}} ) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group subject">
+                                    {{ form_widget(form.sujet, {'attr' : {'class' : 'input-text', 'placeholder' : 'Sujet *'}} ) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group number">
+                                    {{ form_widget(form.telephone, {'attr' : {'class' : 'input-text', 'placeholder' : 'Téléphone *'}} ) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                <div class="form-group message">
+                                    {{ form_widget(form.message, {'attr' : {'class' : 'input-text', 'placeholder' : 'Votre Message *'}} ) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group send-btn">
+                                    {{ form_widget(form.Valider, {'attr' : {'class' : 'button-md button-theme'}}) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 hidden"><b>{{ form_rest(form) }}</b></div>
+                        {{ form_end(form) }}
+                    </div>
+                    <!-- Contact form end -->
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="main-title-2">
+                        <h1><span>Nos Agences</span></h1>
+                    </div>
+                    <!-- Panel box start -->
+                    <div class="panel-box">
+                        <div class="panel with-nav-tabs panel-default">
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade active in">
+                                        <div class="panel-div">
+                                            <div class="panel-group" role="tablist">
+                                                {% for agence in agences %}
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading active" role="tab" id="heading2">
+                                                            <h4 class="panel-title">
+                                                                <a class="collapsed" role="button"
+                                                                   data-toggle="collapse"
+                                                                   data-parent="#accordion"
+                                                                   href="#collapse{{ loop.index }}"
+                                                                   aria-expanded="{% if loop.index == 1 %}true{% else %}false{% endif %} ">
+                                                                    {% if loop.index != 1 %}
+                                                                        <i class="fa fa-plus"></i>{{ agence.nomAgence }}
+                                                                    {% else %}
+                                                                        <i class="fa fa-minus"></i>{{ agence.nomAgence }}
+                                                                    {% endif %}
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapse{{ loop.index }}"
+                                                             class="panel-collapse  {% if loop.index == 1 %}in{% else %}collapse{% endif %}"
+                                                             role="tabpanel"
+                                                             aria-expanded="{% if loop.index == 1 %}true{% else %}false{% endif %}">
+                                                            <div class="contact-details">
+                                                                <div class="panel-body panel-body-2">
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <i class="fa fa-map-marker"></i>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4>Adresse de l'agence</h4>
+                                                                            <p>{{ agence.adresse.bpAdresse }}
+                                                                                {{ agence.adresse.rueAdresse }},
+                                                                                {{ agence.adresse.cpVille }}
+                                                                                {{ agence.adresse.nomVille }}
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <i class="fa fa-phone"></i>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4>Téléphone de l'agence</h4>
+                                                                            <p>{{ agence.telAgence }}
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <i class="fa fa-envelope"></i>
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <h4>E-mail de l'agence</h4>
+                                                                            <p>{{ agence.emailAgence }}
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Panel box end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact body end -->
+
+    <!-- Google map start -->
+    <div class="section">
+        <div class="map">
+            <div id="map" class="contact-map"></div>
+        </div>
+    </div>
+    <!-- Google map end -->
+{% endblock %}

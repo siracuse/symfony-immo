@@ -1,0 +1,236 @@
+<?php
+
+namespace BienBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * proprietaire
+ *
+ * @ORM\Table(name="proprietaire")
+ * @ORM\Entity(repositoryClass="BienBundle\Repository\proprietaireRepository")
+ */
+class proprietaire
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="BienBundle\Entity\bien", mappedBy="proprietaire")
+     *
+     */
+    private $biens;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="BienBundle\Entity\adresse", inversedBy="proprietaires")
+     */
+    private $adresse;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomProprietaire", type="string", length=255)
+     */
+    private $nomProprietaire;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenomProprietaire", type="string", length=255)
+     */
+    private $prenomProprietaire;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telProprietaire", type="string", length=255)
+     */
+    private $telProprietaire;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="emailProprietaire", type="string", length=255)
+     */
+    private $emailProprietaire;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nomProprietaire
+     *
+     * @param string $nomProprietaire
+     *
+     * @return proprietaire
+     */
+    public function setNomProprietaire($nomProprietaire)
+    {
+        $this->nomProprietaire = $nomProprietaire;
+
+        return $this;
+    }
+
+    /**
+     * Get nomProprietaire
+     *
+     * @return string
+     */
+    public function getNomProprietaire()
+    {
+        return $this->nomProprietaire;
+    }
+
+    /**
+     * Set prenomProprietaire
+     *
+     * @param string $prenomProprietaire
+     *
+     * @return proprietaire
+     */
+    public function setPrenomProprietaire($prenomProprietaire)
+    {
+        $this->prenomProprietaire = $prenomProprietaire;
+
+        return $this;
+    }
+
+    /**
+     * Get prenomProprietaire
+     *
+     * @return string
+     */
+    public function getPrenomProprietaire()
+    {
+        return $this->prenomProprietaire;
+    }
+
+    /**
+     * Set telProprietaire
+     *
+     * @param string $telProprietaire
+     *
+     * @return proprietaire
+     */
+    public function setTelProprietaire($telProprietaire)
+    {
+        $this->telProprietaire = $telProprietaire;
+
+        return $this;
+    }
+
+    /**
+     * Get telProprietaire
+     *
+     * @return string
+     */
+    public function getTelProprietaire()
+    {
+        return $this->telProprietaire;
+    }
+
+    /**
+     * Set emailProprietaire
+     *
+     * @param string $emailProprietaire
+     *
+     * @return proprietaire
+     */
+    public function setEmailProprietaire($emailProprietaire)
+    {
+        $this->emailProprietaire = $emailProprietaire;
+
+        return $this;
+    }
+
+    /**
+     * Get emailProprietaire
+     *
+     * @return string
+     */
+    public function getEmailProprietaire()
+    {
+        return $this->emailProprietaire;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->biens = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add bien
+     *
+     * @param \BienBundle\Entity\bien $bien
+     *
+     * @return proprietaire
+     */
+    public function addBien(\BienBundle\Entity\bien $bien)
+    {
+        $this->biens[] = $bien;
+
+        return $this;
+    }
+
+    /**
+     * Remove bien
+     *
+     * @param \BienBundle\Entity\bien $bien
+     */
+    public function removeBien(\BienBundle\Entity\bien $bien)
+    {
+        $this->biens->removeElement($bien);
+    }
+
+    /**
+     * Get biens
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getBiens()
+    {
+        return $this->biens;
+    }
+
+    /**
+     * Set adresse
+     *
+     * @param \BienBundle\Entity\adresse $adresse
+     *
+     * @return proprietaire
+     */
+    public function setAdresse(\BienBundle\Entity\adresse $adresse = null)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return \BienBundle\Entity\adresse
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+}

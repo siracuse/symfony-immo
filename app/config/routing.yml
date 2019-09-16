@@ -1,0 +1,11 @@
+bien:
+    resource: "@BienBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+myapplication_contact:
+    path: /contact
+    defaults: { _controller: BienBundle:Bien:contact}

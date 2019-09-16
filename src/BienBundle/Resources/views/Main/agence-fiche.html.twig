@@ -1,0 +1,64 @@
+{% extends "//layout.html.twig" %}
+
+{% block couleur %}
+    <link rel="stylesheet" type="text/css" id="style_sheet"
+          href="{{ asset('vue/css/skins/'~  couleur.nomCouleur ~'.css') }}">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{{ asset('vue/img/favicon/'~ couleur.nomCouleur ~'-logo.ico') }}"
+          type="image/x-icon">
+{% endblock %}
+
+{% block logoCouleur %}
+    <img src="{{ asset('vue/img/logos/'~ couleur.nomCouleur ~'-logo.png') }}" alt="logo">
+{% endblock %}
+
+{% block bandeau %}
+    <!-- Sub banner start -->
+    <div class="sub-banner">
+        <div class="overlay">
+            <div class="container">
+                <div class="breadcrumb-area">
+                    <h1>Nos Agences</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="{{ path('accueil') }}">Accueil</a></li>
+                        <li class="active">Nos Agences</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sub Banner end -->
+{% endblock %}
+{% block body %}
+    <div class="blog-body content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <!-- Blog box start -->
+                    <div class="thumbnail blog-box clearfix">
+                        <img src="{{ asset('uploads/agences/' ~  agence.photoAgence ~ '') }}" alt="photo-agence">
+                        <!-- detail -->
+                        <div class="caption detail">
+                            <!--Main title -->
+                            <div class="main-title-2">
+                                <h1>{{ agence.nomAgence }}</h1>
+                            </div>
+                            <!-- Post meta -->
+                            <div class="post-meta">
+                                <span><a><i class="fa fa-phone"></i>{{ agence.telAgence }}</a></span>
+                                <span><a><i class="fa fa-envelope"></i>{{ agence.emailAgence }}</a></span>
+                                <span><a><i class="fa fa-map-marker"></i>
+                                        {{ agence.adresse.bpAdresse }} {{ agence.adresse.rueAdresse }}
+                                        {{ agence.adresse.cpVille }} {{ agence.adresse.nomVille }}</a>
+                                </span>
+                            </div>
+                            <!-- paragraph -->
+                            <p> {{ agence.descripAgence|raw }}</p>
+                        </div>
+                    </div>
+                    <!-- Blog box end -->
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

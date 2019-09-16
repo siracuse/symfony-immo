@@ -1,0 +1,92 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Biens
+{% endblock %}
+{% block title %}
+    <h5> Agences Immobilier > <a href="{{ path('admin-bien-view') }}"> Nos Biens </a> > Responsables </h5>
+{% endblock %}
+{% block body %}
+    <div class="breadcrumbs">
+        <div class="col-md-12">
+            <div class="page-header text-center">
+                <h1 style="font-size:24px;">Agents responsables du bien : <b>{{ bien.titreBien }}</b> </h1>
+            </div>
+        </div>
+    </div>
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-12">
+                    {% for message in app.flashes('modif') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header"><b>Ajouter</b> un Agent
+                        </div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                {{ form_start(form) }}
+                                {% for agent in form.agents %}
+                                <div class="col-lg-6 col-md-12 SHmarge">
+                                    {{ form_widget(agent) }}
+                                    {{ form_errors(agent) }}
+                                </div>
+                                {% endfor %}<br><br>
+                                <div class="col-md-12">{{ form_widget(form.Valider) }}</div>
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="text-center"> Agent(s) responsable(s)</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Prénom</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if agents == null %}
+                                        <tr>
+                                            <td colspan="2" class="text-center"><i> vide </i></td>
+                                        </tr>
+                                    {% else %}
+                                        {% for agent in agents %}
+                                            <tr>
+                                                <td>
+                                                    <a href="/agence/web/app_dev.php/admin/agent/fiche/{{ agent.id }}">{{ agent.nomAgent }}</a>
+                                                </td>
+                                                <td>
+                                                    <a href="/agence/web/app_dev.php/admin/agent/fiche/{{ agent.id }}">{{ agent.prenomAgent }}</a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,481 @@
+{% extends "//layout.html.twig" %}
+
+{% block couleur %}
+    <link rel="stylesheet" type="text/css" id="style_sheet"
+          href="{{ asset('vue/css/skins/'~  couleur.nomCouleur ~'.css') }}">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{{ asset('vue/img/favicon/'~ couleur.nomCouleur ~'-logo.ico') }}"
+          type="image/x-icon">
+{% endblock %}
+
+{% block logoCouleur %}
+    <img src="{{ asset('vue/img/logos/'~ couleur.nomCouleur ~'-logo.png') }}" alt="logo">
+{% endblock %}
+
+{% block bandeau %}
+    <!-- Sub banner start -->
+    <div class="sub-banner">
+        <div class="overlay">
+            <div class="container">
+                <div class="breadcrumb-area">
+                    <h1>Agent {{ agent.nomAgent }}</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="/agence/web/app_dev.php">Accueil</a></li>
+                        <li class="active">Agent {{ agent.nomAgent }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sub Banner end -->
+{% endblock %}
+
+{% block body %}
+    <!-- Agent section start -->
+    <div class="agent-section content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <!-- Agent box list start -->
+                    <div class="agent-box-big clearfix">
+                        <div class="col-lg-6 col-md-6 col-sm-6 agent-box-theme agent-theme">
+                            <img src="{{ asset('uploads/agents/' ~  agent.photoAgent ~ '') }}" alt="agent"
+                                 class="img-responsive" width="375" height="400">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 agent-content">
+                            <h1 class="title">
+                                {{ agent.nomAgent }} {{ agent.prenomAgent }}
+                            </h1>
+                            <hr>
+                            <!-- Address list -->
+                            <ul class="address-list">
+                                <li>
+                                <span>
+                                    <i class="fa fa-tag"></i>Nom :
+                                </span>
+                                    {{ agent.nomAgent }}
+                                </li>
+                                <li>
+                                <span>
+                                    <i class="fa fa-tag"></i>Prenom :
+                                </span>
+                                    {{ agent.prenomAgent }}
+                                </li>
+                                <li>
+                                <span>
+                                    <i class="fa fa-envelope"></i>Email:
+                                </span>
+                                    {{ agent.emailAgent }}
+                                </li>
+                                <li>
+                                <span>
+                                    <i class="fa fa-phone"></i>Tél:
+                                </span>
+                                    {{ agent.telAgent }}
+                                </li>
+                            </ul>
+                            <!-- social list -->
+                            <ul class="social-list clearfix">
+                                <li>
+                                    <a href="#" class="facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="linkedin">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="google">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="rss">
+                                        <i class="fa fa-rss"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Agent box list end -->
+                    <div class="sidebar-widget clearfix biography">
+                        <!-- Main Title 2 -->
+                        <div class="main-title-2">
+                            <h1><span>Biography</span></h1>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla
+                            finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus
+                            suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla
+                            diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a
+                            consequat purus viverra a.
+                        </p>
+                        <p>
+                            Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus.
+                            Mauris ac maximus neque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit
+                            amet rutrum elementum</p>
+                        <br>
+
+                        <div class="panel-box">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab1default" data-toggle="tab" aria-expanded="true">Additional
+                                        Details</a></li>
+                                <li class=""><a href="#tab2default" data-toggle="tab"
+                                                aria-expanded="false">Attachments</a></li>
+                            </ul>
+                            <div class="panel with-nav-tabs panel-default">
+                                <div class="panel-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade active in" id="tab1default">
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <ul class="additional-details-list">
+                                                        <li><span>Agent Since:</span>2016</li>
+                                                        <li><span>Last Sold Property:</span>3 day ago</li>
+                                                        <li><span>Properties Sold:</span>20</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <ul class="additional-details-list">
+                                                        <li><span>Properties Rented:</span>26</li>
+                                                        <li><span>Average Price:</span>$180,000</li>
+                                                        <li><span>Website:</span><a href="#">www.sparker.com</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade features" id="tab2default">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                                    <div class="attachments">
+                                                        <a href="#"><i class="fa fa-file-o"></i>Resume</a>
+                                                        <br><br>
+                                                        <a href="#"><i class="fa fa-file-o"></i>Brochure</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recently properties start -->
+                    <div class="recently-properties">
+                        <!-- Main title -->
+                        <div class="main-title-2">
+                            <h1><span>Recently</span> Properties</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="property">
+                                    <!-- Property img -->
+                                    <a href="properties-details.html" class="property-img">
+                                        <div class="property-tag button alt featured">Featured</div>
+                                        <div class="property-tag button sale">For Sale</div>
+                                        <div class="property-price">$150,000</div>
+                                        <img src="http://placehold.it/230x160" alt="properties-1"
+                                             class="img-responsive">
+                                    </a>
+                                    <!-- Property content -->
+                                    <div class="property-content">
+                                        <!-- title -->
+                                        <h1 class="title">
+                                            <a href="#">Beautiful Single Home</a>
+                                        </h1>
+                                        <!-- Property address -->
+                                        <h3 class="property-address">
+                                            <a href="properties-details.html">
+                                                <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City,
+                                            </a>
+                                        </h3>
+                                        <!-- Facilities List -->
+                                        <ul class="facilities-list clearfix">
+                                            <li>
+                                                <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
+                                                <span>4800 sq ft</span>
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-bed"></i>
+                                                <span>3 Beds</span>
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-holidays"></i>
+                                                <span> 2 Baths</span>
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-vehicle"></i>
+                                                <span>1 Garage</span>
+                                            </li>
+                                        </ul>
+                                        <!-- Property footer -->
+                                        <div class="property-footer">
+                                            <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
+                                            <span class="right">
+                                            <a href="#"><i class="fa fa-heart-o icon"></i></a>
+                                            <a href="#"><i class="fa fa-share-alt"></i></a>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="property">
+                                    <!-- Property img -->
+                                    <a href="properties-details.html" class="property-img">
+                                        <div class="property-tag button alt featured">Featured</div>
+                                        <div class="property-tag button sale">For Sale</div>
+                                        <div class="property-price">$150,000</div>
+                                        <img src="http://placehold.it/230x160" alt="properties-3"
+                                             class="img-responsive">
+                                    </a>
+                                    <!-- Property content -->
+                                    <div class="property-content">
+                                        <!-- title -->
+                                        <h1 class="title">
+                                            <a href="#">Modern Family Home</a>
+                                        </h1>
+                                        <!-- Property address -->
+                                        <h3 class="property-address">
+                                            <a href="properties-details.html">
+                                                <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City,
+                                            </a>
+                                        </h3>
+                                        <!-- Facilities List -->
+                                        <ul class="facilities-list clearfix">
+                                            <li>
+                                                <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
+                                                <span>4800 sq ft</span>
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-bed"></i>
+                                                <span>3 Beds</span>
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-holidays"></i>
+                                                <span> 2 Baths</span>
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-vehicle"></i>
+                                                <span>1 Garage</span>
+                                            </li>
+                                        </ul>
+                                        <!-- Property footer -->
+                                        <div class="property-footer">
+                                            <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
+                                            <span class="right">
+                                            <a href="#"><i class="fa fa-heart-o icon"></i></a>
+                                            <a href="#"><i class="fa fa-share-alt"></i></a>
+                                         </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="property">
+                                    <!-- Property img -->
+                                    <a href="properties-details.html" class="property-img">
+                                        <div class="property-tag button alt featured">Featured</div>
+                                        <div class="property-tag button sale">For Sale</div>
+                                        <div class="property-price">$150,000</div>
+                                        <img src="http://placehold.it/230x160" alt="properties-4"
+                                             class="img-responsive">
+                                    </a>
+                                    <!-- Property content -->
+                                    <div class="property-content">
+                                        <!-- title -->
+                                        <h1 class="title">
+                                            <a href="#">Sweet Family Home</a>
+                                        </h1>
+                                        <!-- Property address -->
+                                        <h3 class="property-address">
+                                            <a href="properties-details.html">
+                                                <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City,
+                                            </a>
+                                        </h3>
+                                        <!-- Facilities List -->
+                                        <ul class="facilities-list clearfix">
+                                            <li>
+                                                <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
+                                                <span>4800 sq ft</span>
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-bed"></i>
+                                                <span>3 Beds</span>
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-holidays"></i>
+                                                <span> 2 Baths</span>
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-vehicle"></i>
+                                                <span>1 Garage</span>
+                                            </li>
+                                        </ul>
+                                        <!-- Property footer -->
+                                        <div class="property-footer">
+                                            <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
+                                            <span class="right">
+                                            <a href="#"><i class="fa fa-heart-o icon"></i></a>
+                                            <a href="#"><i class="fa fa-share-alt"></i></a>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Partners block end -->
+
+                    <!-- Page navigation start -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <i class="fa fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Page navigation end -->
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12  col-xs-12">
+                    <div class="sidebar">
+                        <div class="sidebar-widget contact-form">
+                            <div class="main-title-2">
+                                <h1><span>Contact</span> Agent</h1>
+                            </div>
+                            <form id="agent_form" action="index.html" method="GET" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group your-name">
+                                            <input type="email" name="name" class="input-text" placeholder="Your Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group your-email">
+                                            <input type="email" name="email" class="input-text"
+                                                   placeholder="Your Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group your-phone">
+                                            <input type="text" name="phone" class="input-text" placeholder="Your Phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group message">
+                                            <textarea class="input-text" name="message"
+                                                      placeholder=" Message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <button type="submit" class="button-md button-theme btn-block">Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Recent Properties -->
+                        <div class="sidebar-widget popular-posts">
+                            <div class="main-title-2">
+                                <h1><span>Recent</span> Properties</h1>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="http://placehold.it/90x63" alt="small-properties-1">
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">
+                                        <a href="#">Modern Design Building</a>
+                                    </h3>
+                                    <p>21 October, 2016</p>
+                                    <div class="comments-icon">
+                                        <i class="fa fa-comments"></i>45 comments
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="http://placehold.it/90x63" alt="small-properties-2">
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">
+                                        <a href="#">Real Eatate Expo 2016</a>
+                                    </h3>
+                                    <p>10 October, 2016</p>
+                                    <div class="comments-icon">
+                                        <i class="fa fa-comments"></i>32 comments
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="http://placehold.it/90x63" alt="small-properties-3">
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">
+                                        <a href="#">Construction and Development</a>
+                                    </h3>
+                                    <p>10 October, 2016</p>
+                                    <div class="comments-icon">
+                                        <i class="fa fa-comments"></i>58 comments
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Category posts -->
+                        <div class="sidebar-widget category-posts">
+                            <div class="main-title-2">
+                                <h1><span>popular</span> Category</h1>
+                            </div>
+                            <ul class="list-unstyled list-cat">
+                                <li><a href="#">Single Family </a> <span>(45)  </span></li>
+                                <li><a href="#">Apartment </a> <span>(21)  </span></li>
+                                <li><a href="#">Condo </a> <span>(23)  </span></li>
+                                <li><a href="#">Multi Family </a> <span>(19)  </span></li>
+                                <li><a href="#">Villa </a> <span>(19)  </span></li>
+                                <li><a href="#">Other </a> <span>(22)  </span></li>
+                            </ul>
+                        </div>
+                        <!-- Social media -->
+                        <div class="social-media sidebar-widget clearfix">
+                            <!-- Main Title 2 -->
+                            <div class="main-title-2">
+                                <h1><span>Social</span> Media</h1>
+                            </div>
+                            <!-- Social list -->
+                            <ul class="social-list">
+                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Agent section end -->
+{% endblock %}

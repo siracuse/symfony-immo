@@ -1,0 +1,28 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Zone Géographique
+{% endblock %}
+{% block title %}
+    <h5>Autres > <a href="{{ path('admin-zone-geo-view') }}"> Zone Géographique </a> > Modifier </h5>
+{% endblock %}
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header"><strong>Modification </strong> de la zone :
+                            <strong>{{ zoneGeo.nomZone }}</strong>
+                        </div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                {{ form(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

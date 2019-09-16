@@ -1,0 +1,88 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Biens
+{% endblock %}
+{% block title %}
+    <h5> Agences Immobilier > <a href="{{ path('admin-bien-view') }}"> Nos Biens </a> > Responsables </h5>
+{% endblock %}
+{% block body %}
+
+    <div class="breadcrumbs">
+        <div class="col-md-12">
+            <div class="page-header text-center">
+                <h1 style="font-size:24px;">Agences responsables du bien : <b>{{ bien.titreBien }}</b> </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-12">
+                    {% for message in app.flashes('modif') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header"><strong>Ajouter </strong> une Agence
+                        </div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                {{ form_start(form) }}
+                                {% for agence in form.agences %}
+                                <div class="col-lg-6 col-md-12 SHmarge">
+                                    {{ form_widget(agence) }}
+                                    {{ form_errors(agence) }}
+                                </div>
+                                {% endfor %}<br><br>
+                                <div class="col-md-12">{{ form_widget(form.Valider) }}</div>
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="text-center"> Agence(s) responsable(s)</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Nom</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if agences == null %}
+                                        <tr>
+                                            <td colspan="1" class="text-center"><i> vide </i></td>
+                                        </tr>
+                                    {% else %}
+                                        {% for agence in agences %}
+                                            <tr>
+                                                <td> <a href="/agence/web/app_dev.php/admin/agence/fiche/{{ agence.id }}">{{ agence.nomAgence }}</a></td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+

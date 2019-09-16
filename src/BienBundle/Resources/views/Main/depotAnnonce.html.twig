@@ -1,0 +1,367 @@
+{% extends "//layout.html.twig" %}
+{% block couleur %}
+    {% for couleur in couleurs %}
+        <link rel="stylesheet" type="text/css" id="style_sheet"
+              href="{{ asset('vue/css/skins/'~  couleur.nomCouleur ~'.css') }}">
+        <!-- Favicon icon -->
+        <link rel="shortcut icon" href="{{ asset('vue/img/favicon/'~ couleur.nomCouleur ~'-logo.ico') }}" type="image/x-icon">
+    {% endfor %}
+{% endblock %}
+{% block logoCouleur %}
+    {% for couleur in couleurs %}
+        <img src="{{ asset('vue/img/logos/'~ couleur.nomCouleur ~'-logo.png') }}" alt="logo">
+    {% endfor %}
+{% endblock %}
+{% block bandeau %}
+    <!-- Sub banner start -->
+    <div class="sub-banner">
+        <div class="overlay">
+            <div class="container">
+                <div class="breadcrumb-area">
+                    <h1>Déposer une annonce</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="/agence/web/app_dev.php/">Accueil</a></li>
+                        <li class="active">Déposer une annonce</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sub Banner end -->
+{% endblock %}
+
+{% block body %}
+    <!-- Submit Property start -->
+    <div class="content-area submit-property">
+        <div class="container">
+            <div class="row">
+                {#<div class="col-md-12">#}
+                {#<div class="notification-box">#}
+                {#<h3>Don't Have an Account?</h3>#}
+                {#<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor at tellus feugiat#}
+                {#congue quis ut nunc. Semper ac dolor vitae accumsan.</p>#}
+                {#</div>#}
+                {#</div>#}
+                <div class="col-md-12">
+                    <div class="submit-address">
+                        {{ form_start(form) }}
+                        <div class="main-title-2">
+                            <h1><span>Votre</span> annonce</h1>
+                        </div>
+
+                        <div class="search-contents-sidebar">
+                            <div class="form-group">
+                                <label>Titre de l'annonce</label>
+                                {{ form_widget(form.titreBien, {'attr' : {'class' : 'input-text'}}) }}
+                                {{ form_errors(form.titreBien) }}
+                                {#<input type="text" class="input-text" name="your name" placeholder="Villa F6">#}
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Statut</label>
+                                        {{ form_widget(form.typeVenteBien, {'attr' : {'class' : 'selectpicker search-fields'}}) }}
+                                        {{ form_errors(form.typeVenteBien) }}
+                                        {#<select class="selectpicker search-fields" name="for-sale">#}
+                                        {#<option>For Sale</option>#}
+                                        {#<option>For Rent</option>#}
+                                        {#</select>#}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Type du bien</label>
+                                        {{ form_widget(form.typeBien, {'attr' : {'class' : 'selectpicker search-fields'}}) }}
+                                        {{ form_errors(form.typeBien) }}
+                                        {#<select class="selectpicker search-fields" name="apartment">#}
+                                        {#<option>Apartment</option>#}
+                                        {#<option>House</option>#}
+                                        {#<option>Commercial</option>#}
+                                        {#<option>Garage</option>#}
+                                        {#<option>Lot</option>#}
+                                        {#</select>#}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Surface (m²)</label>
+                                        {{ form_widget(form.surfaceBien, {'attr' : {'class' : 'input-text'}}) }}
+                                        {{ form_errors(form.surfaceBien) }}
+                                        {#<input type="text" class="input-text" name="your name">#}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Prix (€)</label>
+                                        {{ form_widget(form.prixBien, {'attr' : {'class' : 'input-text'}}) }}
+                                        {{ form_errors(form.prixBien) }}
+                                        {#<input type="text" class="input-text" name="your name">#}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-title-2">
+                            <h1><span>Photo</span></h1>
+                        </div>
+                        {#<div id="myDropZone" class="dropzone dropzone-design">#}
+                            {#<div class="dz-default dz-message"><span>Glisser vos photos ici</span></div>#}
+                        {#</div>#}
+                        {#{{ form_row(form.photoBien) }}#}
+
+                        <div class="main-title-2">
+                            <h1><span>Localisation du bien </span></h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+
+
+                                <div class="form-group">
+                                    <label>Ville</label>
+                                    {{ form_widget(form.adresse.nomVille, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.adresse.nomVille) }}
+                                    {#<select class="selectpicker search-fields" name="choose-city"#}
+                                    {#data-live-search="true" data-live-search-placeholder="Choisir la ville">#}
+                                    {#<option>New York</option>#}
+                                    {#<option>Los Angeles</option>#}
+                                    {#<option>Chicago</option>#}
+                                    {#<option>Brooklyn</option>#}
+                                    {#<option>Queens</option>#}
+                                    {#<option>Houston</option>#}
+                                    {#<option>Manhattan</option>#}
+                                    {#<option>Philadelphia</option>#}
+                                    {#<option>Phoenix</option>#}
+                                    {#<option>San Antonio</option>#}
+                                    {#<option>Bronx</option>#}
+                                    {#<option>San Diego</option>#}
+                                    {#<option>Dallas</option>#}
+                                    {#<option>San Jose</option>#}
+                                    {#</select>#}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Rue / Chemin</label>
+                                    {{ form_widget(form.adresse.rueAdresse, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.adresse.rueAdresse) }}
+                                    {#<input type="text" class="input-text" name="address" placeholder="Chemin des lys">#}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Code Postal</label>
+                                    {{ form_widget(form.adresse.cpVille, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.adresse.cpVille) }}
+                                    {#<input type="text" class="input-text" name="zip" placeholder="97400">#}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label>Boîte postal</label>
+                                    {{ form_widget(form.adresse.bpAdresse, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.adresse.bpAdresse) }}
+                                    {#<input type="text" class="input-text" name="zip" placeholder="90">#}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Zone Géo</label>
+                                    {{ form_widget(form.adresse.zoneGeo) }}
+                                    {{ form_errors(form.adresse.zoneGeo) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-title-2">
+                            <h1><span>Description</span> de l'annonce</h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    {{ form_widget(form.descripBien, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.descripBien) }}
+                                    {#<textarea class="input-text" name="message"></textarea>#}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Nombre de pièce(s)</label>
+                                    {{ form_widget(form.nbPieceBien, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.nbPieceBien) }}
+                                    {#<input type="number" class="input-text" name="zip">#}
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Nombre de chambre(s)</label>
+                                    {{ form_widget(form.nbChambreBien, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.nbChambreBien) }}
+                                    {#<input type="number" class="input-text" name="zip">#}
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Nombre de salle de bain(s)</label>
+                                    {{ form_widget(form.nbSalleDeBainBien, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.nbSalleDeBainBien) }}
+                                    {#<input type="number" class="input-text" name="zip">#}
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                {#<label class="margin-t-10">Option(s)</label>#}
+                                <div class="row">
+                                    {{ form_row(form.detailsBiens) }}
+
+                                    {#<div class="col-lg-4 col-sm-4 col-xs-12">#}
+                                    {#<div class="checkbox checkbox-theme checkbox-circle">#}
+                                    {#<input id="checkbox1" type="checkbox">#}
+                                    {#<label for="checkbox1">#}
+                                    {#Parking gratuit#}
+                                    {#</label>#}
+                                    {#</div>#}
+                                    {#<div class="checkbox checkbox-theme checkbox-circle">#}
+                                    {#<input id="checkbox2" type="checkbox">#}
+                                    {#<label for="checkbox2">#}
+                                    {#Climatisation#}
+                                    {#</label>#}
+                                    {#</div>#}
+                                    {#</div>#}
+                                    {#<div class="col-lg-4 col-sm-4 col-xs-12">#}
+                                    {#<div class="checkbox checkbox-theme checkbox-circle">#}
+                                    {#<input id="checkbox4" type="checkbox">#}
+                                    {#<label for="checkbox4">#}
+                                    {#Piscine#}
+                                    {#</label>#}
+                                    {#</div>#}
+                                    {#<div class="checkbox checkbox-theme checkbox-circle">#}
+                                    {#<input id="checkbox5" type="checkbox">#}
+                                    {#<label for="checkbox5">#}
+                                    {#Fibre internet#}
+                                    {#</label>#}
+                                    {#</div>#}
+                                    {#</div>#}
+                                    {#<div class="col-lg-4 col-sm-4 col-xs-12">#}
+                                    {#<div class="checkbox checkbox-theme checkbox-circle">#}
+                                    {#<input id="checkbox7" type="checkbox">#}
+                                    {#<label for="checkbox7">#}
+                                    {#Jardin#}
+                                    {#</label>#}
+                                    {#</div>#}
+                                    {#<div class="checkbox checkbox-theme checkbox-circle">#}
+                                    {#<input id="checkbox8" type="checkbox">#}
+                                    {#<label for="checkbox8">#}
+                                    {#Alarme#}
+                                    {#</label>#}
+                                    {#</div>#}
+                                    {#</div>#}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-title-2">
+                            <h1><span>Contact proprio</span></h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Nom du propriétaire</label>
+                                    {{ form_widget(form.proprietaire.nomProprietaire, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.proprietaire.nomProprietaire) }}
+                                    {#<input type="text" class="input-text" name="name" placeholder="Nom">#}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Prénom</label>
+                                    {{ form_widget(form.proprietaire.prenomProprietaire, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.proprietaire.prenomProprietaire) }}
+                                    {#<input type="text" class="input-text" name="name" placeholder="Prénom">#}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    {{ form_widget(form.proprietaire.emailProprietaire, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.proprietaire.emailProprietaire) }}
+                                    {#<input type="email" class="input-text" name="email" placeholder="Email">#}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Téléphone</label>
+                                    {{ form_widget(form.proprietaire.telProprietaire, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.proprietaire.telProprietaire) }}
+                                    {#<input type="text" class="input-text" name="phone" placeholder="Téléphone">#}
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="main-title-2">
+                            <h1><span>Localisation du proprio </span></h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+
+
+                                <div class="form-group">
+                                    <label>Ville</label>
+                                    {{ form_widget(form.proprietaire.adresse.nomVille, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.proprietaire.adresse.nomVille) }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Rue / Chemin</label>
+                                    {{ form_widget(form.proprietaire.adresse.rueAdresse, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.proprietaire.adresse.rueAdresse) }}
+                                    {#<input type="text" class="input-text" name="address" placeholder="Chemin des lys">#}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Code Postal</label>
+                                    {{ form_widget(form.proprietaire.adresse.cpVille, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.proprietaire.adresse.cpVille) }}
+                                    {#<input type="text" class="input-text" name="zip" placeholder="97400">#}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label>Boîte postal</label>
+                                    {{ form_widget(form.proprietaire.adresse.bpAdresse, {'attr' : {'class' : 'input-text'}}) }}
+                                    {{ form_errors(form.proprietaire.adresse.bpAdresse) }}
+                                    {#<input type="text" class="input-text" name="zip" placeholder="90">#}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label> Zone Géo</label>
+                                    {{ form_widget(form.proprietaire.adresse.zoneGeo) }}
+                                    {{ form_errors(form.proprietaire.adresse.zoneGeo) }}
+                                </div>
+                            </div>
+                        </div>
+                        {{ form_row(form.agences) }}
+                        {{ form_row(form.agents) }}
+
+                        {{ form_widget(form.Valider) }}
+
+                        <div class="col-md-12 hidden">{{ form_rest(form) }}</div>
+                        {{ form_end(form) }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Submit Property end -->
+
+{% endblock %}

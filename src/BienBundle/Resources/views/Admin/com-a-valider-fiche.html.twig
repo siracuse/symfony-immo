@@ -1,0 +1,43 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Commentaires
+{% endblock %}
+{% block title %}
+    <h5> Bien Immobilier > <a href="{{ path('admin-com-a-valider-view') }}"> Commentaires </a></h5>
+{% endblock %}
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 col-sm-12">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <b>Auteur :</b><br>
+                            {{ commentaire.auteurCom }}
+                        </div>
+                        <div class="card-body">
+                            <div class="mx-auto d-block">
+                                <h6 class="SHmarge"><b>Message : </b></h6>
+                                {{ commentaire.messageCom }}
+                            </div>
+                            <hr>
+                            <div class="card-text text-center">
+                                Envoyé le : "{{ commentaire.dateCom| localizeddate('medium', 'none') }}
+                                à {{ commentaire.dateCom|date('G:i:s') }}"
+                                <hr>
+                                <a href="/agence/web/app_dev.php/admin/com-a-valider/valider/{{ commentaire.id }}"
+                                   style="margin-right: 10%;">
+                                    <i class="menu-icon fa fa-check"></i>
+                                </a>
+                                <a data-href="/agence/web/app_dev.php/admin/com-a-valider/delete/{{ commentaire.id }}"
+                                   data-toggle="modal" data-target="#confirm-delete">
+                                    <i class="menu-icon fa fa-close"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,456 @@
+<?php
+
+namespace BienBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * adresse
+ *
+ * @ORM\Table(name="adresse")
+ * @ORM\Entity(repositoryClass="BienBundle\Repository\adresseRepository")
+ */
+class adresse
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="zoneGeo", inversedBy="adresses", cascade={"persist"})
+     */
+    private $zoneGeo;
+
+    /**
+     * @ORM\OneToMany(targetEntity="BienBundle\Entity\User", mappedBy="adresse")
+     */
+    private $users;
+
+    /**
+     * @ORM\OneToMany(targetEntity="BienBundle\Entity\bien", mappedBy="adresse")
+     */
+    private $biens;
+
+    /**
+     * @ORM\OneToMany(targetEntity="BienBundle\Entity\agence", mappedBy="adresse")
+     *
+     */
+    private $agences;
+
+    /**
+     * @ORM\OneToMany (targetEntity="BienBundle\Entity\agent", mappedBy="adresse")
+     */
+    private $agents;
+
+    /**
+     * @ORM\OneToMany (targetEntity="BienBundle\Entity\proprietaire", mappedBy="adresse")
+     */
+    private $proprietaires;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="bpAdresse", type="integer")
+     */
+    private $bpAdresse;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rueAdresse", type="string", length=255)
+     */
+    private $rueAdresse;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomVille", type="string", length=255)
+     */
+    private $nomVille;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cpVille", type="string", length=255)
+     */
+    private $cpVille;
+
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="lat", type="float", scale=6, nullable=true)
+     */
+    private $lat;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="lng", type="float", scale=6, nullable=true)
+     */
+    private $lng;
+
+
+
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set bpAdresse
+     *
+     * @param integer $bpAdresse
+     *
+     * @return adresse
+     */
+    public function setBpAdresse($bpAdresse)
+    {
+        $this->bpAdresse = $bpAdresse;
+
+        return $this;
+    }
+
+    /**
+     * Get bpAdresse
+     *
+     * @return int
+     */
+    public function getBpAdresse()
+    {
+        return $this->bpAdresse;
+    }
+
+    /**
+     * Set rueAdresse
+     *
+     * @param string $rueAdresse
+     *
+     * @return adresse
+     */
+    public function setRueAdresse($rueAdresse)
+    {
+        $this->rueAdresse = $rueAdresse;
+
+        return $this;
+    }
+
+    /**
+     * Get rueAdresse
+     *
+     * @return string
+     */
+    public function getRueAdresse()
+    {
+        return $this->rueAdresse;
+    }
+
+    /**
+     * Set nomVille
+     *
+     * @param string $nomVille
+     *
+     * @return adresse
+     */
+    public function setNomVille($nomVille)
+    {
+        $this->nomVille = $nomVille;
+
+        return $this;
+    }
+
+    /**
+     * Get nomVille
+     *
+     * @return string
+     */
+    public function getNomVille()
+    {
+        return $this->nomVille;
+    }
+
+    /**
+     * Set cpVille
+     *
+     * @param string $cpVille
+     *
+     * @return adresse
+     */
+    public function setCpVille($cpVille)
+    {
+        $this->cpVille = $cpVille;
+
+        return $this;
+    }
+
+    /**
+     * Get cpVille
+     *
+     * @return string
+     */
+    public function getCpVille()
+    {
+        return $this->cpVille;
+    }
+
+    /**
+     * Set zoneGeo
+     *
+     * @param \BienBundle\Entity\zoneGeo $zoneGeo
+     *
+     * @return adresse
+     */
+    public function setZoneGeo(\BienBundle\Entity\zoneGeo $zoneGeo = null)
+    {
+        $this->zoneGeo = $zoneGeo;
+
+        return $this;
+    }
+
+    /**
+     * Get zoneGeo
+     *
+     * @return \BienBundle\Entity\zoneGeo
+     */
+    public function getZoneGeo()
+    {
+        return $this->zoneGeo;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->users = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add user
+     *
+     * @param \BienBundle\Entity\User $user
+     *
+     * @return adresse
+     */
+    public function addUser(\BienBundle\Entity\User $user)
+    {
+        $this->users[] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Remove user
+     *
+     * @param \BienBundle\Entity\User $user
+     */
+    public function removeUser(\BienBundle\Entity\User $user)
+    {
+        $this->users->removeElement($user);
+    }
+
+    /**
+     * Get users
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
+
+    /**
+     * Add bien
+     *
+     * @param \BienBundle\Entity\bien $bien
+     *
+     * @return adresse
+     */
+    public function addBien(\BienBundle\Entity\bien $bien)
+    {
+        $this->biens[] = $bien;
+
+        return $this;
+    }
+
+    /**
+     * Remove bien
+     *
+     * @param \BienBundle\Entity\bien $bien
+     */
+    public function removeBien(\BienBundle\Entity\bien $bien)
+    {
+        $this->biens->removeElement($bien);
+    }
+
+    /**
+     * Get biens
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getBiens()
+    {
+        return $this->biens;
+    }
+
+    /**
+     * Add agence
+     *
+     * @param \BienBundle\Entity\agence $agence
+     *
+     * @return adresse
+     */
+    public function addAgence(\BienBundle\Entity\agence $agence)
+    {
+        $this->agences[] = $agence;
+
+        return $this;
+    }
+
+    /**
+     * Remove agence
+     *
+     * @param \BienBundle\Entity\agence $agence
+     */
+    public function removeAgence(\BienBundle\Entity\agence $agence)
+    {
+        $this->agences->removeElement($agence);
+    }
+
+    /**
+     * Get agences
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAgences()
+    {
+        return $this->agences;
+    }
+
+    /**
+     * Add agent
+     *
+     * @param \BienBundle\Entity\agent $agent
+     *
+     * @return adresse
+     */
+    public function addAgent(\BienBundle\Entity\agent $agent)
+    {
+        $this->agents[] = $agent;
+
+        return $this;
+    }
+
+    /**
+     * Remove agent
+     *
+     * @param \BienBundle\Entity\agent $agent
+     */
+    public function removeAgent(\BienBundle\Entity\agent $agent)
+    {
+        $this->agents->removeElement($agent);
+    }
+
+    /**
+     * Get agents
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAgents()
+    {
+        return $this->agents;
+    }
+
+    /**
+     * Add proprietaire
+     *
+     * @param \BienBundle\Entity\proprietaire $proprietaire
+     *
+     * @return adresse
+     */
+    public function addProprietaire(\BienBundle\Entity\proprietaire $proprietaire)
+    {
+        $this->proprietaires[] = $proprietaire;
+
+        return $this;
+    }
+
+    /**
+     * Remove proprietaire
+     *
+     * @param \BienBundle\Entity\proprietaire $proprietaire
+     */
+    public function removeProprietaire(\BienBundle\Entity\proprietaire $proprietaire)
+    {
+        $this->proprietaires->removeElement($proprietaire);
+    }
+
+    /**
+     * Get proprietaires
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProprietaires()
+    {
+        return $this->proprietaires;
+    }
+
+    /**
+     * Set lat
+     *
+     * @param float $lat
+     *
+     * @return adresse
+     */
+    public function setLat($lat)
+    {
+        $this->lat = $lat;
+
+        return $this;
+    }
+
+    /**
+     * Get lat
+     *
+     * @return float
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * Set lng
+     *
+     * @param float $lng
+     *
+     * @return adresse
+     */
+    public function setLng($lng)
+    {
+        $this->lng = $lng;
+
+        return $this;
+    }
+
+    /**
+     * Get lng
+     *
+     * @return float
+     */
+    public function getLng()
+    {
+        return $this->lng;
+    }
+}

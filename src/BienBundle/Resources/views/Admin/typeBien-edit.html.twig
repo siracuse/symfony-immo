@@ -1,0 +1,32 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Type Bien
+{% endblock %}
+{% block title %}
+    <h5> Autres > <a href="{{ path('admin-type-bien-view') }}"> Type de Bien </a> > Modifier </h5>
+{% endblock %}
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header"><strong>Modification </strong> du type :
+                            <strong>{{ type.nomTypeBien }}</strong>
+                        </div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                {{ form_start(form) }}
+                                <div class="col-md-12">{{ form_row(form.nomTypeBien) }}</div>
+                                <div class="col-md-12">{{ form_row(form.descriptionType) }}</div>
+                                <div class="col-md-12">{{ form_widget(form.Valider) }}</div>
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

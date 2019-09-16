@@ -1,0 +1,31 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Options Bien
+{% endblock %}
+{% block title %}
+    <h5> Autres > <a href="{{ path('admin-details-bien-view') }}"> Options du Bien </a> > Ajouter </h5>
+{% endblock %}
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header"><strong>Ajout </strong> d'une Option :
+                        </div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                {{ form_start(form) }}
+                                {{ form_label(form.nomDetails) }}
+                                {{ form_widget(form.nomDetails, {'attr': {'autofocus': 'autofocus'}}) }}
+                                {{ form_errors(form.nomDetails) }}<br>
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

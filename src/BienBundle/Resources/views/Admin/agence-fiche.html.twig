@@ -1,0 +1,133 @@
+{% extends "//layoutAdmin.html.twig" %}
+
+{% block header %}
+    {{ parent() }} - Agences
+{% endblock %}
+
+{% block title %}
+    <h5> L'entreprise > <a href="{{ path('admin-agence-view') }}"> Les Agences </a> > Fiche </h5>
+{% endblock %}
+
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mx-auto d-block">
+                                <img class="rounded-circle mx-auto d-block"
+                                     src="{{ asset('uploads/agences/' ~  agence.photoAgence ~ '') }}"
+                                     alt="Card image cap">
+                                <h5 class="text-center mt-2 mb-1">{{ agence.nomAgence }}</h5>
+
+                                <div class="location text-center"><i class="fa fa-phone"
+                                                                        style="margin-right: 10px;"> </i> {{ agence.telAgence }}
+                                </div>
+                                <div class="location text-center"><i class="fa fa-map-marker"
+                                                                        style="margin-right: 10px;"> </i> {{ agence.adresse.bpAdresse }} {{ agence.adresse.rueAdresse }}
+                                    <br>
+                                    {{ agence.adresse.cpVille }}, {{ agence.adresse.nomVille }}
+                                </div>
+                                <div class="location text-center"><i class="fa fa-envelope"
+                                                                        style="margin-right: 10px;"> </i> {{ agence.emailAgence }}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="card-text text-center">
+                               {{ agence.descripAgence|raw }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="text-center"> Agent(s) affecté(s)
+                                <a href="{{ path('admin-agence-membre', {'id': agence.id}) }}">
+                                    <i class="menu-icon fa fa-user-plus pull-right"></i>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Nom Agent</th>
+                                        <th scope="col">Prénom</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if agents == null %}
+                                        <tr>
+                                            <td colspan="2" class="text-center"><i> vide </i></td>
+                                        </tr>
+                                    {% else %}
+                                        {% for agent in agents %}
+                                            <tr>
+                                                <td>
+                                                    <a href="/agence/web/app_dev.php/admin/agent/fiche/{{ agent.id }}"> {{ agent.nomAgent }} </a>
+                                                </td>
+                                                <td> <a href="/agence/web/app_dev.php/admin/agent/fiche/{{ agent.id }}"> {{ agent.prenomAgent }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="text-center"> Bien(s) affecté(s)</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Titre</th>
+                                        <th scope="col">Surface (m²)</th>
+                                        <th scope="col">Ville</th>
+                                        <th scope="col">Type Vente</th>
+                                        <th scope="col">Prix (€)</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if biens == null %}
+                                        <tr>
+                                            <td colspan="5" class="text-center"><i> vide </i></td>
+                                        </tr>
+                                    {% else %}
+                                        {% for bien in biens %}
+                                            <tr>
+                                                <td>
+                                                    <a href="/agence/web/app_dev.php/admin/bien/fiche/{{ bien.id }}">  {{ bien.titreBien }}</a>
+                                                </td>
+                                                <td> {{ bien.surfaceBien }}</td>
+                                                <td>
+                                                    {{ bien.adresse.nomVille }}
+                                                </td>
+                                                <td> {{ bien.typeVenteBien }}</td>
+                                                <td> {{ bien.prixBien }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <a href="/agence/web/app_dev.php/admin/agence/edit/{{ agence.id }}"
+                       class="btn btn-primary center-block" role="button">Modifier l'agence</a>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+{% endblock %}

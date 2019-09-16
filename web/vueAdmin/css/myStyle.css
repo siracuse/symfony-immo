@@ -1,0 +1,100 @@
+.SHmarge3 {
+    margin-left: 10px;
+}
+
+.SHmarge {
+    margin-bottom: 12px;
+}
+.SHmargeTop {
+    margin-top: 12px;
+}
+.SHimgAgent {
+    width: 70px;
+    height: 70px;
+    background-size: 100% 100%;
+}
+
+/*CSS BLOCK COULEUR */
+.SH1 {
+    width: 10px;
+    height: 10px;
+    background-color: #0b35ae;
+    margin-top: 5px;
+}
+
+.SH2 {
+    width: 10px;
+    height: 10px;
+    background-color: #3c9dff;
+    margin-top: 5px;
+}
+
+.SH3 {
+    width: 10px;
+    height: 10px;
+    background-color: #A14C10;
+    margin-top: 5px;
+}
+
+.SH4 {
+    width: 10px;
+    height: 10px;
+    background-color: #f0f0f0;
+    margin-top: 5px;
+}
+
+.SH5 {
+    width: 10px;
+    height: 10px;
+    background-color: #0dcdbd;
+    margin-top: 5px;
+}
+
+.SH6 {
+    width: 10px;
+    height: 10px;
+    background-color: #1abc9c;
+    margin-top: 5px;
+}
+
+.SH7 {
+    width: 10px;
+    height: 10px;
+    background-color: #b3c211;
+    margin-top: 5px;
+}
+
+.SH8 {
+    width: 10px;
+    height: 10px;
+    background-color: #F34B0A;
+    margin-top: 5px;
+}
+
+.SH9 {
+    width: 10px;
+    height: 10px;
+    background-color: #8e44ad;
+    margin-top: 5px;
+}
+
+.SH10 {
+    width: 10px;
+    height: 10px;
+    background-color: #d20023;
+    margin-top: 5px;
+}
+
+.SH11 {
+    width: 10px;
+    height: 10px;
+    background-color: #ffb400;
+    margin-top: 5px;
+}
+
+.SH12 {
+    width: 10px;
+    height: 10px;
+    background-color: #eae328;
+    margin-top: 5px;
+}

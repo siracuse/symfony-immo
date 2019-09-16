@@ -1,0 +1,21 @@
+{% extends "//layoutAdmin.html.twig" %}
+{%  block header %}
+    {{ parent() }} - Utilisateurs
+{% endblock %}
+{% block title %}
+    <h5> Administrateur > <a href="/agence/web/app_dev.php/admin/utilisateur/view"> Les Utilisateurs </a> > Ajout </h5>
+{% endblock %}
+{% block body %}
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 col-md-offset-2">
+                <br>
+                <h2 class="text-center"> Ajout d'un Utilisateur : </h2>
+                <hr>
+                <br>
+                {{ form(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Utilisateurs
+{% endblock %}
+{% block title %}
+    <h4> Administrateur > <a href="/agence/web/app_dev.php/admin/utilisateur/view"> Les Utilisateurs </a> > Modification </h4>
+{% endblock %}
+
+{% block body %}
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 col-md-offset-2">
+                <br>
+                <h2 class="text-center"> Modification d'un Utilisateur : </h2>
+                <hr>
+                <br>
+                {{ form_start(form) }}
+
+                {{ form_row(form.nomUser) }}
+                {{ form_row(form.prenomUser) }}
+                {{ form_row(form.telUser) }}
+                {{ form_row(form.adresse) }}
+                <br>
+                {{ form_row(form.adresse) }}
+                {{ form_row(form.adresse.Valider, {'attr': {'class' : 'btn btn-primary'} }) }}
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

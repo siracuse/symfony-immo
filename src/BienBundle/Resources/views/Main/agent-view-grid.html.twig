@@ -1,0 +1,129 @@
+{% extends "//layout.html.twig" %}
+{% block couleur %}
+    <link rel="stylesheet" type="text/css" id="style_sheet"
+          href="{{ asset('vue/css/skins/'~  couleur.nomCouleur ~'.css') }}">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{{ asset('vue/img/favicon/'~ couleur.nomCouleur ~'-logo.ico') }}"
+          type="image/x-icon">
+{% endblock %}
+{% block logoCouleur %}
+    <img src="{{ asset('vue/img/logos/'~ couleur.nomCouleur ~'-logo.png') }}" alt="logo">
+{% endblock %}
+{% block bandeau %}
+    <!-- Sub banner start -->
+    <div class="sub-banner">
+        <div class="overlay">
+            <div class="container">
+                <div class="breadcrumb-area">
+                    <h1>Nos Agents</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="/agence/web/app_dev.php">Accueil</a></li>
+                        <li class="active">Nos Agents</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sub Banner end -->
+{% endblock %}
+
+{% block body %}
+    <!-- Agent section start -->
+    <div class="content-area agent-section">
+        <div class="container">
+            <!-- option bar start -->
+            <div class="option-bar">
+                <div class="row">
+                    <div class="col-lg-6 col-md-5 col-sm-5 col-xs-2">
+                        <h4>
+                        <span class="heading-icon">
+                            <i class="fa fa-th-large"></i>
+                        </span>
+                            <span class="hidden-xs">Nos Agents</span>
+                        </h4>
+                    </div>
+                    <div class="col-lg-6 col-md-7 col-sm-7 col-xs-10 cod-pad">
+                        <div class="sorting-options">
+                            <select class="sorting">
+                                <option>New To Old</option>
+                                <option>Old To New</option>
+                                <option>Properties (High To Low)</option>
+                                <option>Properties (Low To High)</option>
+                            </select>
+                            <a href="{{ path('agent-view-list') }}" class="change-view-btn"><i
+                                        class="fa fa-th-list"></i></a>
+                            <a href="{{ path('agent-view-grid') }}" class="change-view-btn active-view-btn"><i
+                                        class="fa fa-th-large"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- option bar end -->
+            <div class="clearfix"></div>
+            <div class="row">
+                {% for agent in agents %}
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <!-- Agent box end -->
+                        <div class="agent-box">
+                            <!-- Agent img -->
+                            <a href="/agence/web/app_dev.php/agent/fiche/{{ agent.id }}" class="agent-img">
+                                <div class="SHimgAgentGrid img-responsive"
+                                     style="background-image:url('{{ asset('uploads/agents/' ~  agent.photoAgent ~ '') }}') ">
+                                </div>
+                            </a>
+                            <!-- Agent content -->
+                            <div class="agent-content">
+                                <!-- title -->
+                                <h1 class="title">
+                                    <a href="/agence/web/app_dev.php/agent/fiche/{{ agent.id }}">{{ agent.nomAgent }} {{ agent.prenomAgent }}</a>
+                                </h1>
+                                <!-- Contact -->
+                                <div class="contact">
+                                    <p>
+                                        <a href="/agence/web/app_dev.php/agent/fiche/{{ agent.id }}"> <i
+                                                    class="fa fa-envelope-o"></i>{{ agent.emailAgent }}</a>
+                                    </p>
+                                    <p>
+                                        <a href="/agence/web/app_dev.php/agent/fiche/{{ agent.id }}"><i
+                                                    class="fa fa-phone"></i>{{ agent.telAgent }}</a>
+                                    </p>
+                                </div>
+                                <!-- Sociallist -->
+                                <ul class="social-list clearfix">
+                                    <li>
+                                        <a href="#" class="facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="linkedin">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="google">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="rss">
+                                            <i class="fa fa-rss"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Agent box end -->
+                    </div>
+                {% endfor %}
+            </div>
+            <div>{{ knp_pagination_render(agents) }}</div>
+        </div>
+    </div>
+    <!-- Agent section end -->
+{% endblock %}

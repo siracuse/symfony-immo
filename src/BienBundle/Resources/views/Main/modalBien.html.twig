@@ -1,0 +1,50 @@
+<div class="property">
+    <a href="/agence/web/app_dev.php/bien/fiche/{{ bien.id }}" class="property-img">
+        <div class="property-tag button alt featured">{{ bien.typeBien.nomTypeBien }}</div>
+        <div class="property-tag button sale">{{ bien.typeVenteBien }}</div>
+        <div class="property-price">
+            {{ bien.prixBien }} €
+            {% if bien.typeVenteBien == 'À Louer' %}
+                / mois
+            {% endif %}
+        </div>
+        <div class="SHimgBienAccueil img-responsive"
+             style="background-image:url('{{ asset('uploads/biens/'~ bien.photoBien ~'') }}') ">
+        </div>
+    </a>
+    <div class="property-content">
+        <h1 class="title">
+            <a href="/agence/web/app_dev.php/bien/fiche/{{ bien.id }}">{{ bien.titreBien }}</a>
+        </h1>
+            <div class="SHaccueilAdresse">
+                <i class="fa fa-map-marker" style="margin-right:5px;"></i>
+                {{ bien.adresse.zoneGeo.nomZone }}
+            </div>
+        <ul class="facilities-list clearfix">
+            <li>
+                <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
+                <span>{{ bien.surfaceBien }} m²</span>
+            </li>
+            <li>
+                <i class="flaticon-bed"></i>
+                <span>{{ bien.nbPieceBien }} Pièce(s)</span>
+            </li>
+            <li>
+                <i class="flaticon-bed"></i>
+                <span>{{ bien.nbChambreBien }} Chambre(s) </span>
+            </li>
+            <li>
+                <i class="flaticon-holidays"></i>
+                <span>{{ bien.nbSalleDeBainBien }} Salle(s) d'eau</span>
+            </li>
+        </ul>
+        <div class="property-footer">
+            <span class="left"><i
+                        class="fa fa-calendar-o icon"></i> Ajouté le {{ bien.dateDepotBien  | localizeddate('medium', 'none') }}</span>
+            <span class="right">
+                <a href="#"><i class="fa fa-heart-o icon"></i></a>
+                <a href="#"><i class="fa fa-share-alt"></i></a>
+            </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+{% extends "//layoutAdmin.html.twig" %}
+
+{% block header %}
+    {{ parent() }} - Agences
+{% endblock %}
+
+{% block title %}
+    <h5> L'entreprise > Les Agences </h5>
+{% endblock %}
+
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-lg-12">
+                    {% for message in app.flashes('ajout') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                    {% for message in app.flashes('modif') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                    {% for message in app.flashes('suppression') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong> {{ message }} </strong>
+                        </div>
+                    {% endfor %}
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="col-md-10 offset-1"><h2 class="text-center"> Les Agences</h2></div>
+                            <div class="col-md-1 text-right">
+                                <a href="{{ path('admin-agence-new') }}">
+                                    <i class="menu-icon fa fa-plus SHbtAdd" style="margin-top: 10px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="bootstrap-data-table">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Téléphone</th>
+                                        <th scope="col">Ville</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if listAgences == null %}
+                                        <tr>
+                                            <td colspan="4" class="text-center"><i> vide </i></td>
+                                        </tr>
+                                    {% else %}
+                                        {% for agence in listAgences %}
+                                            <tr>
+                                                <td>
+                                                    <a href="{{ path('admin-agence-fiche', {'id': agence.id}) }}">
+                                                        {{ agence.nomAgence }}
+                                                        {% if agence.agencePrincipale == 'oui' %}
+                                                            [Principale]
+                                                        {% endif %}
+                                                    </a>
+                                                </td>
+                                                <td> {{ agence.telAgence }}</td>
+                                                <td>{{ agence.adresse.nomVille }}</td>
+                                                <td>
+                                                    <a href="/agence/web/app_dev.php/admin/agence/membre/{{ agence.id }}"
+                                                       data-toggle="tooltip" data-placement="top" title="Gestion"
+                                                       style="margin-right: 10%;">
+                                                        <i class="menu-icon fa fa-user"></i>
+                                                    </a>
+                                                    <a href="/agence/web/app_dev.php/admin/agence/edit/{{ agence.id }}"
+                                                       style="margin-right: 10%;">
+                                                        <i class="menu-icon fa fa-edit"></i>
+                                                    </a>
+                                                    {% if agence.agencePrincipale == 'non' %}
+                                                        <a data-href="/agence/web/app_dev.php/admin/agence/delete/{{ agence.id }}"
+                                                           data-toggle="modal" data-target="#confirm-delete">
+                                                            <i class="menu-icon fa fa-trash"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

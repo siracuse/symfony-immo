@@ -1,0 +1,254 @@
+{% extends "//layout.html.twig" %}
+{% block couleur %}
+    <link rel="stylesheet" type="text/css" id="style_sheet"
+          href="{{ asset('vue/css/skins/'~  couleur.nomCouleur ~'.css') }}">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{{ asset('vue/img/favicon/'~ couleur.nomCouleur ~'-logo.ico') }}"
+          type="image/x-icon">
+{% endblock %}
+{% block logoCouleur %}
+    <img src="{{ asset('vue/img/logos/'~ couleur.nomCouleur ~'-logo.png') }}" alt="logo">
+{% endblock %}
+{% block bandeau %}
+    <!-- Sub banner start -->
+    <div class="sub-banner">
+        <div class="overlay">
+            <div class="container">
+                <div class="breadcrumb-area">
+                    <h1>Nos Biens Immobiliers</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="/agence/web/app_dev.php">Accueil</a></li>
+                        <li class="active">Nos Biens</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <!-- Properties section body start -->
+    <div class="properties-section-body content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-xs-12">
+                    <!-- Option bar start -->
+                    <div class="option-bar">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-2">
+                                <h4>
+                                <span class="heading-icon">
+                                    <i class="fa fa-th-list"></i>
+                                </span>
+                                    <span class="hidden-xs">Nos Biens</span>
+                                </h4>
+                            </div>
+                            <div class="col-lg-6 col-md-7 col-sm-7 col-xs-10 cod-pad">
+                                <div class="sorting-options">
+                                    <select class="sorting">
+                                        <option>New To Old</option>
+                                        <option>Old To New</option>
+                                        <option>Properties (High To Low)</option>
+                                        <option>Properties (Low To High)</option>
+                                    </select>
+                                    <a href="/agence/web/app_dev.php/bien/view/list"
+                                       class="change-view-btn active-view-btn"><i class="fa fa-th-list"></i></a>
+                                    <a href="/agence/web/app_dev.php/bien/view/grid" class="change-view-btn"><i
+                                                class="fa fa-th-large"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Option bar end -->
+
+                    <div class="clearfix"></div>
+
+
+                    <!-- Property start -->
+                    {% if bienSearch == null %}
+                        <div class="alert alert-danger">
+                            <strong>Aucune annonce ne correspond exactement à vos critères</strong>
+                        </div>
+                    {% else %}
+                        {% for bien in biens %}
+                            <div class="property clearfix wow fadeInUp delay-02s">
+                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-pad">
+                                    <a href="/agence/web/app_dev.php/bien/fiche/{{ bien.id }}"
+                                       class="property-img height">
+                                        <div class="property-tag button alt featured">{{ bien.typeBien.nomTypeBien }}</div>
+                                        <div class="property-tag button sale">{{ bien.typeVenteBien }}</div>
+                                        <div class="property-price">
+                                            {{ bien.prixBien }} €
+                                            {% if bien.typeVenteBien == 'À Louer' %}
+                                                / mois
+                                            {% endif %}
+                                        </div>
+                                        <img src="{{ asset('uploads/biens/'~ bien.photoBien ~ '') }}" alt="properties-1"
+                                             class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 property-content ">
+                                    <!-- title -->
+                                    <h1 class="title">
+                                        <a href="/agence/web/app_dev.php/bien/fiche/{{ bien.id }}">{{ bien.titreBien }}</a>
+                                    </h1>
+                                    <!-- Property address -->
+                                    <h3 class="property-address">
+                                        <a href="/agence/web/app_dev.php/bien/fiche/{{ bien.id }}">
+                                            <i class="fa fa-map-marker"></i>Zone : {{ bien.adresse.zoneGeo.nomZone }}
+                                        </a>
+                                    </h3>
+                                    <!-- Facilities List -->
+                                    <ul class="facilities-list clearfix">
+                                        <li>
+                                            <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
+                                            <span>{{ bien.surfaceBien }} m²</span>
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-bed"></i>
+                                            <span>{{ bien.nbPieceBien }} Pièce(s)</span>
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-bed"></i>
+                                            <span>{{ bien.nbChambreBien }} Chambre(s) </span>
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-holidays"></i>
+                                            <span> {{ bien.nbSalleDeBainBien }} Salle(s) d'eau</span>
+                                        </li>
+                                    </ul>
+                                    <!-- Property footer -->
+                                    <div class="property-footer">
+                                    <span class="left"><i
+                                                class="fa fa-calendar-o icon"></i> Ajouté le {{ bien.dateDepotBien | localizeddate('medium', 'none') }}</span>
+                                        <span class="right">
+                                <a href="#"><i class="fa fa-heart-o icon"></i></a>
+                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                             </span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    <!-- Property end -->
+
+
+                    <!-- Page navigation start -->
+                    <div>{{ knp_pagination_render(biens) }}</div>
+                    <!-- Page navigation end-->
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-xs-12">
+
+                    <!-- Search contents sidebar start -->
+                    <div class="sidebar-widget">
+                        <div class="main-title-2">
+                            <h1><span>Recherche</span> Avancée</h1>
+                        </div>
+                        {{ form_start(form) }}
+                        <div class="SHmarge2">
+                            {{ form_widget(form.typeVenteBien, {'attr' : {
+                                'class' : 'search-fieldss selectpicker',
+                                'data-live-search' : 'true',
+                                'data-live-search-placeholder' : 'Recherche'
+                            }}) }}
+                        </div>
+                        {{ form_errors(form.typeVenteBien) }}
+
+                        <div class="SHmarge2">
+                            {{ form_widget(form.typeBien, {'attr' : {
+                                'class' : 'search-fieldss selectpicker',
+                                'data-live-search' : 'true',
+                                'data-live-search-placeholder' : 'Recherche'
+                            }}) }}
+                            {{ form_errors(form.typeBien) }}
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 SHmarge2">
+                                {{ form_widget(form.zoneGeo, {'attr' : {
+                                    'class' : 'search-fieldss selectpicker',
+                                    'data-live-search' : 'true',
+                                    'data-live-search-placeholder' : 'Recherche'
+                                }}) }}
+                                {{ form_errors(form.zoneGeo) }}
+                            </div>
+                            <div class="col-md-6 SHmarge2">
+                                {{ form_widget(form.nbPiece, {'attr' : {
+                                    'class' : 'search-fieldss selectpicker',
+                                    'data-live-search' : 'true',
+                                    'data-live-search-placeholder' : 'Recherche'
+                                }}) }}
+                                {{ form_errors(form.nbPiece) }}
+                            </div>
+                            <div class="col-md-6 SHmarge2">
+                                {{ form_widget(form.nbChambre, {'attr' : {
+                                    'class' : 'search-fieldss selectpicker',
+                                    'data-live-search' : 'true',
+                                    'data-live-search-placeholder' : 'Recherche'
+                                }}) }}
+                                {{ form_errors(form.nbChambre) }}
+                            </div>
+                            <div class="col-md-6 SHmarge2">
+                                {{ form_widget(form.nbSalleDeBain, {'attr' : {
+                                    'class' : 'search-fieldss selectpicker',
+                                    'data-live-search' : 'true',
+                                    'data-live-search-placeholder' : 'Recherche'
+                                }}) }}
+                                {{ form_errors(form.nbSalleDeBain) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 SHmarge2">
+                                {{ form_widget(form.surfaceBienMax, {'attr' : {
+                                    'class' : 'search-fieldss selectpicker',
+                                    'data-live-search' : 'true',
+                                    'data-live-search-placeholder' : 'Recherche'
+                                }}) }}
+                                {{ form_errors(form.surfaceBienMax) }}
+                            </div>
+                            <div class="col-md-12 SHmarge4">
+                                {{ form_widget(form.prixMax, {'id': 'myRange', 'value': monPrixMax['prixMax'],
+                                    'attr': {'min' : monPrixMin['prixMin'], 'max' : monPrixMax['prixMax']}}) }}
+                                Prix max : <span id="demo"> </span> €
+                            </div>
+                        </div>
+                        {{ form_widget(form.Rechercher) }}
+
+                        {{ form_end(form) }}
+
+                    </div>
+                    <!-- Search contents sidebar end -->
+
+                    <!-- Popular posts start -->
+                    <div class="sidebar-widget popular-posts">
+                        <div class="main-title-2">
+                            <h1><span>Récent</span> Bien ajouté</h1>
+                        </div>
+                        {% for bien in bienRecent %}
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="/agence/web/app_dev.php/bien/fiche/{{ bien.id }}">
+                                    <img class="media-object" src="{{ asset('uploads/biens/'~ bien.photoBien ~'') }}"
+                                         height="63" width="90">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">
+                                        <a href="/agence/web/app_dev.php/bien/fiche/{{ bien.id }}">{{ bien.titreBien }}</a>
+                                    </h3>
+                                    <p>{{ bien.dateDepotBien | localizeddate('medium', 'none') }}</p>
+                                    <div class="comments-icon">
+                                        <i class="fa fa-bookmark"></i>{{ bien.typeVenteBien }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Popular posts end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Properties section body end -->
+{% endblock %}

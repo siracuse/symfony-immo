@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="17823130-7b7a-45db-9bf9-d68e932be3a1" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="agence@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="agence@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="agence@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="agence: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="agence" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1768">
+              <caret line="104" column="92" lean-forward="false" selection-start-line="104" selection-start-column="92" selection-end-line="104" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layoutAdmin.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/layoutAdmin.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>display:block;m</find>
+      <find>img-responsive</find>
+      <find>adresse</find>
+      <find>option</find>
+      <find>Recher</find>
+      <find>Montrer</find>
+      <find>total entries</find>
+      <find>filtered f</find>
+      <find>filtered from</find>
+      <find>filtered</find>
+      <find>descr</find>
+      <find>desc</find>
+      <find>agence</find>
+      <find>agents</find>
+      <find>page-header</find>
+      <find>form</find>
+      <find>liste</find>
+      <find>dat</find>
+      <find>top</find>
+      <find>date</find>
+      <find>activé</find>
+      <find>img-u</find>
+      <find>photo</find>
+      <find>get-&gt;</find>
+      <find>get</find>
+      <find>commen</find>
+      <find>list</find>
+      <find>Property content</find>
+      <find>prix</find>
+      <find>href</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Entity/bienSearch.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Repository/agenceRepository.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Repository/bienRepository.php" />
+        <option value="$PROJECT_DIR$/web/vue/css/style.css" />
+        <option value="$PROJECT_DIR$/web/vueAdmin/css/myStyle.css" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agence-edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agence-new.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agent-new.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agent-edit.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/bienSearchType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/bienType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/agenceType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/agentType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/commentaireType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/contactType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/detailsBienType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/photoType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/ProfileType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/sousCommentaireType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/typeBienType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/UserType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Form/zoneGeoType.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/modalBien.html.twig" />
+        <option value="$PROJECT_DIR$/web/vue/css/myStyle.css" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agence-view-list.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agence-view-grid.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agent-view-list.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agent-view-grid.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/accueil.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agent-fiche.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agence-fiche.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/bien-view-list.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/bien-view-grid.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/zoneGeo-new.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agent-view.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/contact.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Entity/bien.php" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/bien-edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/bien-new.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Main/bien-fiche.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/layoutAdmin.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/admin-accueil.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Controller/BienController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agence-fiche.html.twig" />
+        <option value="$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agence-view.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
+        <option value="$PROJECT_DIR$/web/app.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
+      <path value="$PROJECT_DIR$/vendor/egeloen/ckeditor-bundle" />
+      <path value="$PROJECT_DIR$/vendor/egeloen/json-builder" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1323" />
+    <option name="y" value="-264" />
+    <option name="width" value="1574" />
+    <option name="height" value="588" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>AssetSymfony</id>
+          </State>
+          <State>
+            <id>Symfony</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>TwigAssetMissingInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="TwigBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="TwigBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="TwigBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Exception" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BienBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BienBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BienBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BienBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BienBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Listener" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BienBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BienBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BienBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BienBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Main" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="var" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="var" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="logs" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="agence" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agence" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="SearchEverywhereHistoryKey" value="app_dev.&#9;FILE&#9;file://C:/wamp/www/agence/web/app_dev.php&#10;app_dev.php&#9;FILE&#9;file://C:/wamp/www/agence/web/app_dev.php&#10;Event&#9;FILE&#9;file://C:/wamp/www/agence/vendor/friendsofsymfony/user-bundle/Event/UserEvent.php&#10;style.css&#9;FILE&#9;file://C:/wamp/www/agence/web/vue/css/style.css&#10;Exception.ht&#9;FILE&#9;file://C:/wamp/www/agence/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig&#10;error.html.twig&#9;FILE&#9;file://C:/wamp/www/agence/app/Resources/TwigBundle/views/Exception/error.html.twig&#10;error.html.&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Resources/views/Admin/error.html.twig&#10;bien-fiche&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Resources/views/Main/bien-fiche.html.twig&#10;bien-fi&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Resources/views/Admin/bien-fiche.html.twig&#10;contr&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Controller/BienController.php&#10;bien&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Resources/views/Admin/bien-new.html.twig&#10;zone&#9;null&#9;null&#10;photo&#9;null&#9;null&#10;agent&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Entity/agent.php&#10;errors.xml&#9;FILE&#9;file://C:/wamp/www/agence/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/routing/errors.xml&#10;cache&#9;null&#9;null&#10;log&#9;null&#9;null&#10;FOS\UserBundle&#9;null&#9;null&#10;fosuser&#9;null&#9;null&#10;user&#9;null&#9;null&#10;fos&#9;null&#9;null&#10;layout&#9;FILE&#9;file://C:/wamp/www/agence/app/Resources/views/layoutAdmin.html.twig&#10;agence&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Resources/views/Admin/agence-view.html.twig&#10;Collections&#9;null&#9;null&#10;zone-&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Resources/views/Admin/zoneGeo-view.html.twig&#10;agent-vie&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Resources/views/Admin/agent-view.html.twig&#10;style&#9;FILE&#9;file://C:/wamp/www/agence/web/vueAdmin/scss/style.scss&#10;style.s&#9;FILE&#9;file://C:/wamp/www/agence/web/vueAdmin/scss/style.scss&#10;zoneGeo&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Resources/views/Admin/zoneGeo-new.html.twig&#10;Adresse&#9;null&#9;null&#10;failure&#9;null&#9;null&#10;detail&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Entity/detailsBien.php&#10;ad&#9;FILE&#9;file://C:/wamp/www/agence/src/BienBundle/Entity/adresse.php&#10;success&#9;null&#9;null&#10;Succes&#9;null&#9;null&#10;layo&#9;FILE&#9;file://C:/wamp/www/agence/app/Resources/views/layout.html.twig&#10;adre&#9;null&#9;null" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="new" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:80/agence/web/app_dev.php/admin/agent/new" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17823130-7b7a-45db-9bf9-d68e932be3a1" name="Default" comment="" />
+      <created>1518852034822</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1518852034822</updated>
+      <workItem from="1518852037655" duration="5188000" />
+      <workItem from="1518932517513" duration="598000" />
+      <workItem from="1518934660849" duration="8273000" />
+      <workItem from="1518950600497" duration="2537000" />
+      <workItem from="1518962500772" duration="5947000" />
+      <workItem from="1519016420870" duration="22293000" />
+      <workItem from="1519103408970" duration="8104000" />
+      <workItem from="1519111566127" duration="15459000" />
+      <workItem from="1519136561333" duration="5723000" />
+      <workItem from="1519189435083" duration="23317000" />
+      <workItem from="1519223524590" duration="1941000" />
+      <workItem from="1519277847768" duration="19174000" />
+      <workItem from="1519315809213" duration="5230000" />
+      <workItem from="1519362790083" duration="25394000" />
+      <workItem from="1519447526563" duration="17167000" />
+      <workItem from="1519620860496" duration="24484000" />
+      <workItem from="1519707803730" duration="20952000" />
+      <workItem from="1519793998376" duration="24861000" />
+      <workItem from="1519881278027" duration="22992000" />
+      <workItem from="1519916899656" duration="9712000" />
+      <workItem from="1519967597759" duration="108000" />
+      <workItem from="1519967802655" duration="20727000" />
+      <workItem from="1519992312960" duration="2895000" />
+      <workItem from="1520313028920" duration="23037000" />
+      <workItem from="1520399237939" duration="14430000" />
+      <workItem from="1520418839115" duration="8516000" />
+      <workItem from="1520434428358" duration="3669000" />
+      <workItem from="1520485553230" duration="55000" />
+      <workItem from="1520504507724" duration="8729000" />
+      <workItem from="1520570597126" duration="24889000" />
+      <workItem from="1520754075688" duration="1730000" />
+      <workItem from="1520831863684" duration="25589000" />
+      <workItem from="1520915424956" duration="28378000" />
+      <workItem from="1520952496118" duration="4500000" />
+      <workItem from="1521001673729" duration="28497000" />
+      <workItem from="1521040792690" duration="2545000" />
+      <workItem from="1521043403301" duration="6693000" />
+      <workItem from="1521050169593" duration="574000" />
+      <workItem from="1521087969102" duration="1272000" />
+      <workItem from="1521090932374" duration="21459000" />
+      <workItem from="1521174287329" duration="22999000" />
+      <workItem from="1521202516532" duration="3976000" />
+      <workItem from="1521206778598" duration="19000" />
+      <workItem from="1521434444404" duration="27188000" />
+      <workItem from="1521520171724" duration="27889000" />
+      <workItem from="1521549902454" duration="928000" />
+      <workItem from="1521607337702" duration="922000" />
+      <workItem from="1521609789540" duration="20644000" />
+      <workItem from="1521696947693" duration="21274000" />
+      <workItem from="1521781851505" duration="9706000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="635365000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1358" y="-264" width="1296" height="1040" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31796116" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20431328" sideWeight="0.5088997" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24838188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3325766" sideWeight="0.4911003" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853982" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="66" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Listener/AfterLoginRedirection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/adresseType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-103">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/agenceType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="9" column="56" lean-forward="false" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/agentType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="27" column="98" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/commentaireType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/detailsBienType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/photoType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#35#75#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/couleurType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/contactType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/ProfileType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <element signature="e#35#75#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/proprietaireType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/sousCommentaireType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/typeBienType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/UserType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/zoneGeoType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/bienSearchType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/vue/css/myStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/modalBien.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agence-view-list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agence-view-grid.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="89" lean-forward="false" selection-start-line="11" selection-start-column="89" selection-end-line="11" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agent-view-list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="3" column="55" lean-forward="false" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <caret line="5" column="76" lean-forward="false" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agent-view-grid.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="5" column="72" lean-forward="false" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+          <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/accueil.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agent-fiche.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1297">
+          <caret line="479" column="30" lean-forward="false" selection-start-line="479" selection-start-column="30" selection-end-line="479" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/agence-fiche.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/bien-view-list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="236" column="97" lean-forward="false" selection-start-line="236" selection-start-column="97" selection-end-line="236" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/vueAdmin/css/myStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/zoneGeo-new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <folding>
+            <element signature="e#12#35#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agent-view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="77" lean-forward="false" selection-start-line="76" selection-start-column="77" selection-end-line="76" selection-end-column="77" />
+          <folding>
+            <element signature="e#12#35#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/contact.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="60" lean-forward="false" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Entity/proprietaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Entity/adresse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Entity/bien.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="822">
+          <caret line="65" column="102" lean-forward="false" selection-start-line="65" selection-start-column="102" selection-end-line="65" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Form/bienType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="70" column="38" lean-forward="false" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/bien-new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="54" column="83" lean-forward="false" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
+          <folding>
+            <element signature="e#12#35#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/bien-edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="54" column="83" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="83" />
+          <folding>
+            <element signature="e#12#35#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/bien-view-grid.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="177" column="95" lean-forward="false" selection-start-line="177" selection-start-column="36" selection-end-line="177" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Main/bien-fiche.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="377" column="60" lean-forward="false" selection-start-line="377" selection-start-column="60" selection-end-line="377" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/adresse-view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="58" />
+          <folding>
+            <element signature="e#12#35#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agence-edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#35#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agence-fiche.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+          <folding>
+            <element signature="e#12#35#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/agence-view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="62" column="107" lean-forward="false" selection-start-line="62" selection-start-column="107" selection-end-line="62" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Resources/views/Admin/admin-accueil.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="224" column="39" lean-forward="false" selection-start-line="224" selection-start-column="35" selection-end-line="224" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BienBundle/Controller/BienController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+          <folding>
+            <element signature="e#1092#4005#0#PHP" expanded="false" />
+            <element signature="e#1233#1250#1#PHP" expanded="true" />
+            <element signature="e#1314#1335#1#PHP" expanded="true" />
+            <element signature="e#1386#1404#1#PHP" expanded="true" />
+            <element signature="e#1456#1475#1#PHP" expanded="true" />
+            <element signature="e#1532#1549#1#PHP" expanded="true" />
+            <element signature="e#1613#1630#1#PHP" expanded="true" />
+            <element signature="e#1689#1709#1#PHP" expanded="true" />
+            <element signature="e#1762#1779#1#PHP" expanded="true" />
+            <element signature="e#1837#1854#1#PHP" expanded="true" />
+            <element signature="e#1918#1937#1#PHP" expanded="true" />
+            <element signature="e#2687#2704#1#PHP" expanded="true" />
+            <element signature="e#2920#2962#0#PHP" expanded="true" />
+            <element signature="e#3354#3384#0#PHP" expanded="true" />
+            <element signature="e#4115#4642#0#PHP" expanded="false" />
+            <element signature="e#4259#4279#1#PHP" expanded="true" />
+            <element signature="e#4333#4351#1#PHP" expanded="true" />
+            <element signature="e#4527#4570#0#PHP" expanded="true" />
+            <element signature="e#4723#5254#0#PHP" expanded="false" />
+            <element signature="e#4871#4891#1#PHP" expanded="true" />
+            <element signature="e#4945#4963#1#PHP" expanded="true" />
+            <element signature="e#5139#5182#0#PHP" expanded="true" />
+            <element signature="e#5332#5708#0#PHP" expanded="false" />
+            <element signature="e#5464#5484#1#PHP" expanded="true" />
+            <element signature="e#5535#5553#1#PHP" expanded="true" />
+            <element signature="e#5597#5636#0#PHP" expanded="true" />
+            <element signature="e#5828#6367#0#PHP" expanded="false" />
+            <element signature="e#5977#5997#1#PHP" expanded="true" />
+            <element signature="e#6052#6071#1#PHP" expanded="true" />
+            <element signature="e#6249#6293#0#PHP" expanded="true" />
+            <element signature="e#6450#6989#0#PHP" expanded="false" />
+            <element signature="e#6599#6619#1#PHP" expanded="true" />
+            <element signature="e#6674#6693#1#PHP" expanded="true" />
+            <element signature="e#6871#6915#0#PHP" expanded="true" />
+            <element signature="e#7069#7451#0#PHP" expanded="false" />
+            <element signature="e#7202#7222#1#PHP" expanded="true" />
+            <element signature="e#7274#7293#1#PHP" expanded="true" />
+            <element signature="e#7337#7377#0#PHP" expanded="true" />
+            <element signature="e#7542#7939#0#PHP" expanded="false" />
+            <element signature="e#7682#7702#1#PHP" expanded="true" />
+            <element signature="e#7752#7771#1#PHP" expanded="true" />
+            <element signature="e#7827#7867#0#PHP" expanded="true" />
+            <element signature="e#8045#8857#0#PHP" expanded="false" />
+            <element signature="e#8199#8219#1#PHP" expanded="true" />
+            <element signature="e#8727#8762#0#PHP" expanded="true" />
+            <element signature="e#8933#13361#0#PHP" expanded="false" />
+            <element signature="e#9082#9102#1#PHP" expanded="true" />
+            <element signature="e#9155#9172#1#PHP" expanded="true" />
+            <element signature="e#9230#9247#1#PHP" expanded="true" />
+            <element signature="e#9305#9322#1#PHP" expanded="true" />
+            <element signature="e#9384#9401#1#PHP" expanded="true" />
+            <element signature="e#9467#9484#1#PHP" expanded="true" />
+            <element signature="e#9536#9560#1#PHP" expanded="true" />
+            <element signature="e#11571#11588#1#PHP" expanded="true" />
+            <element signature="e#11805#11847#0#PHP" expanded="true" />
+            <element signature="e#12804#12842#0#PHP" expanded="true" />
+            <element signature="e#13440#15913#0#PHP" expanded="false" />
+            <element signature="e#13583#13603#1#PHP" expanded="true" />
+            <element signature="e#13656#13673#1#PHP" expanded="true" />
+            <element signature="e#13738#13755#1#PHP" expanded="true" />
+            <element signature="e#13813#13830#1#PHP" expanded="true" />
+            <element signature="e#13888#13905#1#PHP" expanded="true" />
+            <element signature="e#14779#14796#1#PHP" expanded="true" />
+            <element signature="e#15013#15055#0#PHP" expanded="true" />
+            <element signature="e#15501#15543#0#PHP" expanded="true" />
+            <element signature="e#15992#19424#0#PHP" expanded="false" />
+            <element signature="e#16183#16200#1#PHP" expanded="true" />
+            <element signature="e#16262#16282#1#PHP" expanded="true" />
+            <element signature="e#16335#16352#1#PHP" expanded="true" />
+            <element signature="e#16410#16427#1#PHP" expanded="true" />
+            <element signature="e#16485#16502#1#PHP" expanded="true" />
+            <element signature="e#17375#17392#1#PHP" expanded="true" />
+            <element signature="e#17608#17650#0#PHP" expanded="true" />
+            <element signature="e#18218#18235#1#PHP" expanded="true" />
+            <element signature="e#18523#18565#0#PHP" expanded="true" />
+            <element signature="e#19011#19053#0#PHP" expanded="true" />
+            <element signature="e#19518#21425#0#PHP" expanded="false" />
+            <element signature="e#19673#19690#1#PHP" expanded="true" />
+            <element signature="e#19752#19772#1#PHP" expanded="true" />
+            <element signature="e#19823#19840#1#PHP" expanded="true" />
+            <element signature="e#19910#19927#1#PHP" expanded="true" />
+            <element signature="e#19985#20002#1#PHP" expanded="true" />
+            <element signature="e#21016#21058#0#PHP" expanded="true" />
+            <element signature="e#21529#23445#0#PHP" expanded="false" />
+            <element signature="e#21686#21706#1#PHP" expanded="true" />
+            <element signature="e#21759#21776#1#PHP" expanded="true" />
+            <element signature="e#21839#21856#1#PHP" expanded="true" />
+            <element signature="e#21931#21948#1#PHP" expanded="true" />
+            <element signature="e#22006#22023#1#PHP" expanded="true" />
+            <element signature="e#23037#23079#0#PHP" expanded="true" />
+            <element signature="e#23555#24643#0#PHP" expanded="false" />
+            <element signature="e#23697#23717#1#PHP" expanded="true" />
+            <element signature="e#23771#23790#1#PHP" expanded="true" />
+            <element signature="e#24418#24453#0#PHP" expanded="true" />
+            <element signature="e#24705#26020#0#PHP" expanded="false" />
+            <element signature="e#26231#27761#0#PHP" expanded="false" />
+            <element signature="e#26355#26374#1#PHP" expanded="true" />
+            <element signature="e#26425#26443#1#PHP" expanded="true" />
+            <element signature="e#26493#26510#1#PHP" expanded="true" />
+            <element signature="e#26560#26580#1#PHP" expanded="true" />
+            <element signature="e#26630#26651#1#PHP" expanded="true" />
+            <element signature="e#26703#26727#1#PHP" expanded="true" />
+            <element signature="e#26777#26794#1#PHP" expanded="true" />
+            <element signature="e#26845#26862#1#PHP" expanded="true" />
+            <element signature="e#26921#26938#1#PHP" expanded="true" />
+            <element signature="e#27002#27026#1#PHP" expanded="true" />
+            <element signature="e#27091#27115#1#PHP" expanded="true" />
+            <element signature="e#27176#27218#0#PHP" expanded="true" />
+            <element signature="e#27878#28384#0#PHP" expanded="false" />
+            <element signature="e#28018#28037#1#PHP" expanded="true" />
+            <element signature="e#28091#28109#1#PHP" expanded="true" />
+            <element signature="e#28174#28191#1#PHP" expanded="true" />
+            <element signature="e#28246#28287#0#PHP" expanded="true" />
+            <element signature="e#28478#28964#0#PHP" expanded="false" />
+            <element signature="e#28623#28642#1#PHP" expanded="true" />
+            <element signature="e#29054#36707#0#PHP" expanded="false" />
+            <element signature="e#29211#29230#1#PHP" expanded="true" />
+            <element signature="e#29495#29514#1#PHP" expanded="true" />
+            <element signature="e#36560#36600#0#PHP" expanded="true" />
+            <element signature="e#36801#38204#0#PHP" expanded="false" />
+            <element signature="e#36960#36979#1#PHP" expanded="true" />
+            <element signature="e#37033#37051#1#PHP" expanded="true" />
+            <element signature="e#38011#38053#0#PHP" expanded="true" />
+            <element signature="e#38287#40834#0#PHP" expanded="false" />
+            <element signature="e#39998#40017#1#PHP" expanded="true" />
+            <element signature="e#40723#40762#0#PHP" expanded="true" />
+            <element signature="e#40919#41264#0#PHP" expanded="false" />
+            <element signature="e#41077#41096#1#PHP" expanded="true" />
+            <element signature="e#41166#41206#0#PHP" expanded="true" />
+            <element signature="e#41378#41881#0#PHP" expanded="false" />
+            <element signature="e#41516#41534#1#PHP" expanded="true" />
+            <element signature="e#41589#41608#1#PHP" expanded="true" />
+            <element signature="e#41673#41690#1#PHP" expanded="true" />
+            <element signature="e#41744#41784#0#PHP" expanded="true" />
+            <element signature="e#41973#42452#0#PHP" expanded="false" />
+            <element signature="e#42116#42134#1#PHP" expanded="true" />
+            <element signature="e#42540#44303#0#PHP" expanded="false" />
+            <element signature="e#42695#42713#1#PHP" expanded="true" />
+            <element signature="e#44159#44198#0#PHP" expanded="true" />
+            <element signature="e#44384#45513#0#PHP" expanded="false" />
+            <element signature="e#45403#45441#0#PHP" expanded="true" />
+            <element signature="e#45596#45896#0#PHP" expanded="false" />
+            <element signature="e#45735#45753#1#PHP" expanded="true" />
+            <element signature="e#45809#45848#0#PHP" expanded="true" />
+            <element signature="e#46014#46806#0#PHP" expanded="false" />
+            <element signature="e#46150#46167#1#PHP" expanded="true" />
+            <element signature="e#46220#46238#1#PHP" expanded="true" />
+            <element signature="e#46303#46328#1#PHP" expanded="true" />
+            <element signature="e#46395#46414#1#PHP" expanded="true" />
+            <element signature="e#46479#46503#1#PHP" expanded="true" />
+            <element signature="e#46558#46597#0#PHP" expanded="true" />
+            <element signature="e#46887#47182#0#PHP" expanded="false" />
+            <element signature="e#47024#47041#1#PHP" expanded="true" />
+            <element signature="e#47098#47136#0#PHP" expanded="true" />
+            <element signature="e#47261#48467#0#PHP" expanded="false" />
+            <element signature="e#48360#48392#0#PHP" expanded="true" />
+            <element signature="e#48557#49027#0#PHP" expanded="false" />
+            <element signature="e#48748#48765#1#PHP" expanded="true" />
+            <element signature="e#49113#50710#0#PHP" expanded="false" />
+            <element signature="e#49266#49283#1#PHP" expanded="true" />
+            <element signature="e#50569#50607#0#PHP" expanded="true" />
+            <element signature="e#50824#52263#0#PHP" expanded="false" />
+            <element signature="e#50990#51007#1#PHP" expanded="true" />
+            <element signature="e#51062#51081#1#PHP" expanded="true" />
+            <element signature="e#52062#52114#0#PHP" expanded="true" />
+            <element signature="e#52375#53776#0#PHP" expanded="false" />
+            <element signature="e#52540#52557#1#PHP" expanded="true" />
+            <element signature="e#52611#52629#1#PHP" expanded="true" />
+            <element signature="e#53578#53629#0#PHP" expanded="true" />
+            <element signature="e#53921#54286#0#PHP" expanded="false" />
+            <element signature="e#54075#54099#1#PHP" expanded="true" />
+            <element signature="e#54173#54220#0#PHP" expanded="true" />
+            <element signature="e#54394#54784#0#PHP" expanded="false" />
+            <element signature="e#54542#54566#1#PHP" expanded="true" />
+            <element signature="e#54886#55276#0#PHP" expanded="false" />
+            <element signature="e#55035#55059#1#PHP" expanded="true" />
+            <element signature="e#55381#55721#0#PHP" expanded="false" />
+            <element signature="e#55535#55559#1#PHP" expanded="true" />
+            <element signature="e#55615#55663#0#PHP" expanded="true" />
+            <element signature="e#55816#56171#0#PHP" expanded="false" />
+            <element signature="e#55965#55989#1#PHP" expanded="true" />
+            <element signature="e#56060#56105#0#PHP" expanded="true" />
+            <element signature="e#56275#56661#0#PHP" expanded="false" />
+            <element signature="e#56421#56445#1#PHP" expanded="true" />
+            <element signature="e#56762#57099#0#PHP" expanded="false" />
+            <element signature="e#56915#56939#1#PHP" expanded="true" />
+            <element signature="e#56995#57041#0#PHP" expanded="true" />
+            <element signature="e#57229#57592#0#PHP" expanded="false" />
+            <element signature="e#57371#57392#1#PHP" expanded="true" />
+            <element signature="e#57688#58385#0#PHP" expanded="false" />
+            <element signature="e#57849#57870#1#PHP" expanded="true" />
+            <element signature="e#58236#58278#0#PHP" expanded="true" />
+            <element signature="e#58474#59117#0#PHP" expanded="false" />
+            <element signature="e#59004#59045#0#PHP" expanded="true" />
+            <element signature="e#59208#59521#0#PHP" expanded="false" />
+            <element signature="e#59352#59373#1#PHP" expanded="true" />
+            <element signature="e#59430#59472#0#PHP" expanded="true" />
+            <element signature="e#59678#60055#0#PHP" expanded="false" />
+            <element signature="e#59825#59849#1#PHP" expanded="true" />
+            <element signature="e#60157#60876#0#PHP" expanded="false" />
+            <element signature="e#60324#60348#1#PHP" expanded="true" />
+            <element signature="e#60722#60763#0#PHP" expanded="true" />
+            <element signature="e#60971#61714#0#PHP" expanded="false" />
+            <element signature="e#61602#61642#0#PHP" expanded="true" />
+            <element signature="e#61811#62137#0#PHP" expanded="false" />
+            <element signature="e#61961#61985#1#PHP" expanded="true" />
+            <element signature="e#62042#62083#0#PHP" expanded="true" />
+            <element signature="e#62262#62626#0#PHP" expanded="false" />
+            <element signature="e#62402#62429#1#PHP" expanded="true" />
+            <element signature="e#62720#63408#0#PHP" expanded="false" />
+            <element signature="e#62878#62898#1#PHP" expanded="true" />
+            <element signature="e#63259#63300#0#PHP" expanded="true" />
+            <element signature="e#63495#64130#0#PHP" expanded="false" />
+            <element signature="e#64018#64058#0#PHP" expanded="true" />
+            <element signature="e#64219#64528#0#PHP" expanded="false" />
+            <element signature="e#64361#64381#1#PHP" expanded="true" />
+            <element signature="e#64437#64478#0#PHP" expanded="true" />
+            <element signature="e#64660#65113#0#PHP" expanded="false" />
+            <element signature="e#64810#64827#1#PHP" expanded="true" />
+            <element signature="e#65012#65052#0#PHP" expanded="true" />
+            <element signature="e#65217#65617#0#PHP" expanded="false" />
+            <element signature="e#65371#65388#1#PHP" expanded="true" />
+            <element signature="e#65717#66369#0#PHP" expanded="false" />
+            <element signature="e#65884#65901#1#PHP" expanded="true" />
+            <element signature="e#66207#66252#0#PHP" expanded="true" />
+            <element signature="e#66462#67136#0#PHP" expanded="false" />
+            <element signature="e#67020#67064#0#PHP" expanded="true" />
+            <element signature="e#67231#67584#0#PHP" expanded="false" />
+            <element signature="e#67380#67397#1#PHP" expanded="true" />
+            <element signature="e#67479#67524#0#PHP" expanded="true" />
+            <element signature="e#67741#68810#0#PHP" expanded="false" />
+            <element signature="e#67912#67932#1#PHP" expanded="true" />
+            <element signature="e#68656#68703#0#PHP" expanded="true" />
+            <element signature="e#68932#69319#0#PHP" expanded="false" />
+            <element signature="e#69082#69102#1#PHP" expanded="true" />
+            <element signature="e#69411#70042#0#PHP" expanded="false" />
+            <element signature="e#69571#69591#1#PHP" expanded="true" />
+            <element signature="e#69892#69933#0#PHP" expanded="true" />
+            <element signature="e#70127#70728#0#PHP" expanded="false" />
+            <element signature="e#70616#70656#0#PHP" expanded="true" />
+            <element signature="e#70815#71142#0#PHP" expanded="false" />
+            <element signature="e#70958#70978#1#PHP" expanded="true" />
+            <element signature="e#71049#71090#0#PHP" expanded="true" />
+            <element signature="e#71204#71287#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" column="92" lean-forward="false" selection-start-line="104" selection-start-column="92" selection-end-line="104" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/layoutAdmin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

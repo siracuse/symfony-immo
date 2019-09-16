@@ -1,0 +1,43 @@
+{% extends "//layoutAdmin.html.twig" %}
+
+{% block header %}
+    {{ parent() }} - Adresse
+{% endblock %}
+
+{% block title %}
+    <h5> Localisation > Adresse </h5>
+{% endblock %}
+
+{% block button %}
+    <div class="col-md-1 center-block">
+        <a href="/agence/web/app_dev.php/admin/adresse/new"
+           class="btn btn-success" role="button">Ajouter une Adresse</a>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="col-md-12">
+        {% for adresse in adresses %}
+            <div class="row">
+                <div class="col-md-8">
+                    {{ adresse.bpAdresse }} {{ adresse.rueAdresse }}<br>
+                    {{ adresse.cpVille }} {{ adresse.nomVille }} <br>
+                    Zone : {{ adresse.zoneGeo.nomZone }}
+                </div>
+
+                <div class="col-md-2">
+                    <a href="/agence/web/app_dev.php/admin/adresse/edit/{{ adresse.id }}"
+                       class="btn btn-warning" role="button">Modifier</a>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-danger"
+                            data-href="/agence/web/app_dev.php/admin/adresse/delete/{{ adresse.id }}"
+                            data-toggle="modal" data-target="#confirm-delete">
+                        Supprimer
+                    </button>
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock %}

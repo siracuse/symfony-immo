@@ -1,0 +1,174 @@
+{% extends "//layoutAdmin.html.twig" %}
+{% block header %}
+    {{ parent() }} - Biens
+{% endblock %}
+{% block title %}
+    <h5> Bien Immobilier > <a href="{{ path('admin-bien-view') }}"> Les Biens </a> > Fiche </h5>
+{% endblock %}
+{% block body %}
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <img class="rounded mx-auto d-block img-responsive"
+                                 src="{{ asset('uploads/biens/' ~ bien.photoBien ~ '') }}" alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="text-center mt-2 mb-1">{{ bien.titreBien }}
+                            </h3>
+                            <hr>
+                            <div class="location">
+                                <i class="ti-angle-right"></i><b> Type : </b> {{ bien.typeBien.nomTypeBien }}<br>
+                                <i class="ti-angle-right"></i> <b> Type de vente : </b> {{ bien.typeVenteBien }}<br>
+                                <i class="ti-angle-right"></i> <b> Adresse : </b> {{ bien.adresse.bpAdresse }}
+                                {{ bien.adresse.rueAdresse }},
+                                {{ bien.adresse.cpVille }}
+                                {{ bien.adresse.nomVille }}<br>
+                                <i class="ti-angle-right"></i> <b> Surface : </b>{{ bien.surfaceBien }} m² <br>
+                                <i class="ti-angle-right"></i> <b> Nombre de pièce(s) : </b> {{ bien.nbPieceBien }}<br>
+                                <i class="ti-angle-right"></i> <b> Nombre de chambre(s)
+                                    : </b> {{ bien.nbChambreBien }} <br>
+                                <i class="ti-angle-right"></i> <b> Nombre de salle(s) d'eau
+                                    : </b> {{ bien.nbSalleDeBainBien }} <br>
+                                <i class="ti-angle-right"></i> <b> Prix : </b> {{ bien.prixBien }} €<br>
+                                <i class="ti-angle-right"></i> <b> Statut : </b> {{ bien.statutBien }} <br>
+                                <i class="ti-angle-right"></i> <b> Date de dépot :</b>
+                                {{ bien.dateDepotBien| localizeddate('medium', 'none') }}<br>
+                                <i class="ti-angle-right"></i> <b> Options du bien : </b>
+                                {% for option in options %}
+                                    <li class="SHmarge3">
+                                        {{ option.nomDetails }}
+                                    </li>
+                                {% endfor %}
+                                <i class="ti-angle-right"></i> <b> Description : </b> <br>
+                                <div class="text-justify SHmarge3">{{ bien.descripBien|raw }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mx-auto d-block">
+                                {% for p in proprio %}
+                                    <h3 class="text-center">Le propriétaire</h3>
+                                    <hr><br>
+                                    <img class="rounded-circle mx-auto d-block"
+                                         src="{{ asset('vue/img/user.png') }}"
+                                         alt="Card image cap" width="200">
+                                    <h5 class="text-sm-center mt-2 mb-1">{{ p.nomProprietaire }} {{ p.prenomProprietaire }}</h5>
+
+                                    <div class="location text-sm-center"><i class="fa fa-phone"
+                                                                            style="margin-right: 10px;"> </i> {{ p.telProprietaire }}
+                                    </div>
+                                    <div class="location text-sm-center"><i class="fa fa-map-marker"
+                                                                            style="margin-right: 10px;"> </i>
+                                        {{ p.adresse.bpAdresse }} {{ p.adresse.rueAdresse }}
+                                        <br>
+                                        {{ p.adresse.cpVille }}, {{ p.adresse.nomVille }}
+                                    </div>
+                                    <div class="location text-sm-center"><i class="fa fa-envelope"
+                                                                            style="margin-right: 10px;"> </i> {{ p.emailProprietaire }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <hr>
+                            <div class="card-text text-sm-center">
+                                <a href="#"><i class="fa fa-facebook pr-1"></i></a>
+                                <a href="#"><i class="fa fa-twitter pr-1"></i></a>
+                                <a href="#"><i class="fa fa-linkedin pr-1"></i></a>
+                                <a href="#"><i class="fa fa-pinterest pr-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="text-center"> Agence(s) Responsable</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Nom de l'agence</th>
+                                                <th scope="col">Téléphone</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% if agences == null %}
+                                                <tr>
+                                                    <td colspan="2" class="text-center"><i> vide </i></td>
+                                                </tr>
+                                            {% else %}
+                                                {% for agence in agences %}
+                                                    <tr>
+                                                        <th>
+                                                            <a href="/agence/web/app_dev.php/admin/agence/fiche/{{ agence.id }}"> {{ agence.nomAgence }} </a>
+                                                        </th>
+                                                        <th> {{ agence.telAgence }}</th>
+                                                    </tr>
+                                                {% endfor %}
+                                            {% endif %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="text-center"> Agent(s) Responsable</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Nom de l'agent</th>
+                                                <th scope="col">Téléphone</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% if agents == null %}
+                                                <tr>
+                                                    <td colspan="2" class="text-center"><i> vide </i></td>
+                                                </tr>
+                                            {% else %}
+                                                {% for agent in agents %}
+                                                    <tr>
+                                                        <th>
+                                                            <a href="/agence/web/app_dev.php/admin/agent/fiche/{{ agent.id }}"> {{ agent.nomAgent }} </a>
+                                                        </th>
+                                                        <th> {{ agent.prenomAgent }}</th>
+                                                    </tr>
+                                                {% endfor %}
+                                            {% endif %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <a href="/agence/web/app_dev.php/admin/bien/edit/{{ bien.id }}" class="btn btn-primary center-block"
+                       role="button">Modifier le bien</a>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+{% endblock %}
