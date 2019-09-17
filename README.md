@@ -14,7 +14,7 @@ Réalisation d'un site web type agence immobilière avec le framework Symfony.
 - intégration du template
 - réalisation du back office avec gestion (consulter, ajouter, modifier, supprimer) des biens, des agences immobilières, du personnel, des commentaires, ...
 
-## Source
+## Sources
 [Documentation - Symfony](https://symfony.com/doc/current/index.html#gsc.tab=0)
 
 [OpenClassroom - Symfony](https://openclassrooms.com/fr/courses/3619856-developpez-votre-site-web-avec-le-framework-symfony)
