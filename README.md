@@ -7,17 +7,17 @@ Projet réalisé pendant mon stage au sein de la société Bourbon Web.
 Réalisation d'un site web type agence immobilière avec le framework Symfony.
 
 
-## Déroulement du projet
+## Intéret pour l'internaute
 
-- phase d'apprentissage du framework
-- choix d'un template sur themeforest
-- création du projet symfony
-- intégration du template
-- réalisation du back office avec gestion (consulter, ajouter, modifier, supprimer) des biens, des agences immobilières, du personnel, des commentaires, ...
+Visualiser très rapidement sur une carte les magasins ou structures proposant des réductions.
 
-## Source
-[Documentation - Symfony](https://symfony.com/doc/current/index.html#gsc.tab=0)
+## Intéret pour le commerçant
 
-[OpenClassroom - Symfony](https://openclassrooms.com/fr/courses/3619856-developpez-votre-site-web-avec-le-framework-symfony)
+Profiter d'une plus grande visibilité et clientèle.
 
-[Theme Forest](https://themeforest.net/)
+## Contributeur
+[Samuel PLACE](https://github.com/Samuel-PLACE)
+
+[Quentin Belaghrouz](https://github.com/QuentinBELAGHROUZ)
+
+[dodo59233](https://github.com/dodo59233)
